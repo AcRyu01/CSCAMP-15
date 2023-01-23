@@ -34,4 +34,8 @@ a {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
+
+  .bg-banner {
+    background: linear-gradient(358.09deg, #fba16d 8.52%, #accdd4 73.66%);
+  }
 }
