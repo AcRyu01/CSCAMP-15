@@ -3,8 +3,10 @@ import logoCamp from "@/assets/images/LogoCamp.png";
 import Ship from "./Ship";
 import cloud1 from "@/assets/images/Cloud1.png";
 import cloud2 from "@/assets/images/Cloud2.png";
+import CountdownTimer from "./CountdownTimer";
 
 function Banner() {
+  const countDownDate = "2023-02-25";
   return (
     <>
       <div className="h-fit bg-banner flex flex-col items-center overflow-hidden">
@@ -36,42 +38,7 @@ function Banner() {
           <p className="text-xl 2xl:text-3xl font-medium text-center">
             นับถอยหลังปิดรับลูกเรือ
           </p>
-          <div className="flex w-full justify-between ">
-            <div className="flex flex-col items-center">
-              <p className=" text-3xl 2xl:text-7xl font-normal text-white">5</p>
-              <p className=" text-xs 2xl:text-sm font-normal">DAYS</p>
-            </div>
-            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
-              {" "}
-              :{" "}
-            </p>
-            <div className="flex flex-col items-center">
-              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
-                20
-              </p>
-              <p className=" text-xs 2xl:text-sm font-normal">HOURS</p>
-            </div>
-            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
-              {" "}
-              :{" "}
-            </p>
-            <div className="flex flex-col items-center">
-              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
-                12
-              </p>
-              <p className=" text-xs 2xl:text-sm font-normal">MINUTES</p>
-            </div>
-            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
-              {" "}
-              :{" "}
-            </p>
-            <div className="flex flex-col items-center">
-              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
-                39
-              </p>
-              <p className=" text-xs 2xl:text-sm font-normal">SECONDS</p>
-            </div>
-          </div>
+          <CountdownTimer targetDate={countDownDate} />
           <button className="text-3xl 2xl:text-5xl font-normal text-white hover:text-black border-white border-[5px] md:border-[3px] 2xl:border-[5px] hover:border-transparent hover:bg-white rounded-[10px]  py-2 px-4 w-fit">
             เข้าร่วม
           </button>
