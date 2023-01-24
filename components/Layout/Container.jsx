@@ -7,7 +7,7 @@ const Container = ({
   style = {},
   noPadding = false,
 }) => {
-  const getMaxWidth = useMemo(() => (fluid ? "unset" : "1200px"), [fluid]);
+  const getMaxWidth = useMemo(() => (fluid ? "unset" : "1440px"), [fluid]);
   return (
     <>
       <div className={`container relative mx-auto ${className}`} style={style}>

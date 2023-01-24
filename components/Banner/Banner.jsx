@@ -1,13 +1,15 @@
 import Image from "next/image";
 import logoCamp from "@/assets/images/LogoCamp.png";
 import Ship from "./Ship";
+import cloud1 from "@/assets/images/Cloud1.png";
+import cloud2 from "@/assets/images/Cloud2.png";
 
 function Banner() {
   return (
     <>
-      <div className="h-fit xl:h-[867px] bg-banner flex flex-col items-center overflow-hidden">
+      <div className="h-fit bg-banner flex flex-col items-center overflow-hidden">
         {/* logo */}
-        <div className="relative w-full h-[201px] mx-4">
+        <div className="relative w-full h-[211px] 2xl:h-[347px] mx-4">
           <Image
             src={logoCamp}
             alt="logo Camp"
@@ -17,32 +19,60 @@ function Banner() {
           />
         </div>
         {/* timer */}
-        <div className="flex flex-col gap-4 w-[80%] max-w-[300px] items-center">
-          <p className="text-lg font-medium text-center">
+        <div className="relative -mt-4 md:-mt-10 2xl:-mt-20 flex flex-col gap-4 2xl:gap-6 w-[80%] max-w-[300px] 2xl:max-w-[500px] items-center">
+          {/* cloud */}
+          <div className="banner-cloud w-[312px] 2xl:w-[581px] h-[163px] 2xl:h-[304px] opacity-50 -top-32 2xl:-top-64 -left-96 2xl:-left-[700px]">
+            <Image src={cloud1} alt="cloud1" fill className="object-contain" />
+          </div>
+          <div className="banner-cloud w-[204px] 2xl:w-[380px] h-[107px] 2xl:h-[199px] opacity-60 -top-20 2xl:-top-60 -right-60 2xl:-right-[430px]">
+            <Image src={cloud1} alt="cloud1" fill className="object-contain" />
+          </div>
+          <div className="banner-cloud w-[226px] 2xl:w-[421px] h-[114px] 2xl:h-[213px] opacity-20 2xl:-top-16 -right-96 2xl:-right-[650px]">
+            <Image src={cloud2} alt="cloud2" fill className="object-contain" />
+          </div>
+          <div className="banner-cloud w-[226px] 2xl:w-[421px] h-[113px] 2xl:h-[213px] opacity-50 top-16 2xl:top-20 -left-60 2xl:-left-[430px]">
+            <Image src={cloud2} alt="cloud2" fill className="object-contain" />
+          </div>
+          <p className="text-xl 2xl:text-3xl font-medium text-center">
             นับถอยหลังปิดรับลูกเรือ
           </p>
-          <div className="flex w-full justify-between">
+          <div className="flex w-full justify-between ">
             <div className="flex flex-col items-center">
-              <p className=" text-3xl font-normal text-white">5</p>
-              <p className=" text-xs font-normal">DAYS</p>
+              <p className=" text-3xl 2xl:text-7xl font-normal text-white">5</p>
+              <p className=" text-xs 2xl:text-sm font-normal">DAYS</p>
             </div>
-            <p className="text-3xl font-normal text-white"> : </p>
+            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
+              {" "}
+              :{" "}
+            </p>
             <div className="flex flex-col items-center">
-              <p className=" text-3xl font-normal text-white">20</p>
-              <p className=" text-xs font-normal">HOURS</p>
+              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
+                20
+              </p>
+              <p className=" text-xs 2xl:text-sm font-normal">HOURS</p>
             </div>
-            <p className="text-3xl font-normal text-white"> : </p>
+            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
+              {" "}
+              :{" "}
+            </p>
             <div className="flex flex-col items-center">
-              <p className=" text-3xl font-normal text-white">12</p>
-              <p className=" text-xs font-normal">MINUTES</p>
+              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
+                12
+              </p>
+              <p className=" text-xs 2xl:text-sm font-normal">MINUTES</p>
             </div>
-            <p className="text-3xl font-normal text-white"> : </p>
+            <p className="text-3xl 2xl:text-5xl font-normal text-white 2xl:mt-2">
+              {" "}
+              :{" "}
+            </p>
             <div className="flex flex-col items-center">
-              <p className=" text-3xl font-normal text-white">39</p>
-              <p className=" text-xs font-normal">SECONDS</p>
+              <p className=" text-3xl 2xl:text-7xl font-normal text-white">
+                39
+              </p>
+              <p className=" text-xs 2xl:text-sm font-normal">SECONDS</p>
             </div>
           </div>
-          <button className="text-3xl font-normal text-white hover:text-black border-white border-[5px] hover:border-transparent hover:bg-white rounded-[10px] py-2 px-4 w-fit">
+          <button className="text-3xl 2xl:text-5xl font-normal text-white hover:text-black border-white border-[5px] md:border-[3px] 2xl:border-[5px] hover:border-transparent hover:bg-white rounded-[10px]  py-2 px-4 w-fit">
             เข้าร่วม
           </button>
         </div>
