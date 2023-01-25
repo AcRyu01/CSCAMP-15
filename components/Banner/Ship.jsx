@@ -15,11 +15,11 @@ function Ship() {
         <Image src={ship1} alt="ship1" fill className="object-contain" />
       </div>
       {/* ship right */}
-      <div className="relative z-30 w-[446px] md:w-[381px] 2xl:w-[626px] h-[378px] md:h-[328px] 2xl:h-[531px] -right-40 md:-right-60 2xl:-right-[420px] -mt-20 md:-mt-52 2xl:-mt-[350px] -rotate-[1.55deg]">
+      <div className="relative z-30 w-[446px] md:w-[381px] 2xl:w-[626px] h-[378px] md:h-[328px] 2xl:h-[531px] -right-40 md:-right-60 2xl:-right-[420px] -mt-24 md:-mt-52 2xl:-mt-[350px] -rotate-[1.55deg]">
         <Image src={ship2} alt="ship2" fill className="object-contain" />
       </div>
       {/* All wave */}
-      <div className="relative md:h-[50px] w-full -top-72 md:-top-64">
+      <div className="relative h-[35px] md:h-[50px] w-full -top-72 md:-top-64">
         {/* wave 4 */}
         <div className="banner-wave hidden md:block h-[200px] 2xl:h-[300px] top-12 2xl:-top-20  z-0">
           <Image src={wave4} alt="wave4" fill />
@@ -30,7 +30,7 @@ function Ship() {
           <Image src={wave2} alt="wave2" fill />
         </div>
         {/* wave 0-1 */}
-        <div className="banner-wave md:h-[550px] 2xl:h-[700px] -top-48 md:-top-60 2xl:-top-96 z-40">
+        <div className="banner-wave md:h-[550px] 2xl:h-[700px] -top-44 md:-top-60 2xl:-top-96 z-40">
           <Image src={wave1} alt="wave1" fill />
           <Image src={wave0} alt="wave0" fill />
         </div>
