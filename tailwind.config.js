@@ -17,7 +17,8 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        primary: ["var(--font-sukhumvitSet)", ...fontFamily.sans],
+        primary: ["var(--font-sukhumvitSet)"],
+        // primary: ["var(--font-sukhumvitSet)", ...fontFamily.sans],
       },
     },
   },

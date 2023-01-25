@@ -23,6 +23,12 @@ a {
 }
 
 @layer components {
+  .banner-wave {
+    @apply absolute w-[769px] md:w-[1024px] lg:w-[1280px] xl:w-[1440px] 2xl:w-[2560px] h-[500px] lg:h-[550px] xl:h-[600px] 2xl:h-[700px];
+  }
+  .banner-cloud {
+    @apply absolute hidden md:block;
+  }
 }
 
 @layer utilities {
@@ -33,5 +39,9 @@ a {
   .no-scrollbar {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
+  }
+
+  .bg-banner {
+    background: linear-gradient(358.09deg, #fba16d 8.52%, #accdd4 73.66%);
   }
 }
