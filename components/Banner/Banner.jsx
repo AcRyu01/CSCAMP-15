@@ -1,12 +1,16 @@
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import logoCamp from "@/assets/images/LogoCamp.png";
 import Ship from "./Ship";
 import cloud1 from "@/assets/images/Cloud1.png";
 import cloud2 from "@/assets/images/Cloud2.png";
-import CountdownTimer from "./CountdownTimer";
 
 function Banner() {
-  const countDownDate = "2023-02-25";
+  const countDownDate = "2022-02-25";
+  // For avoid React Hydration bug.
+  const CountdownTimer = dynamic(() => import("./CountdownTimer"), {
+    ssr: false,
+  });
   return (
     <>
       <div className="h-fit bg-banner flex flex-col items-center overflow-hidden">
