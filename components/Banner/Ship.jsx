@@ -1,11 +1,11 @@
 import Image from "next/image";
 import ship1 from "@/assets/images/Ship1.png";
 import ship2 from "@/assets/images/Ship2.png";
-import wave0 from "@/assets/images/Wave0.png";
-import wave1 from "@/assets/images/Wave1.png";
-import wave2 from "@/assets/images/Wave2.png";
-import wave3 from "@/assets/images/Wave3.png";
-import wave4 from "@/assets/images/Wave4.png";
+import wave0 from "@/assets/images/wave0.png";
+import wave1 from "@/assets/images/wave1.png";
+import wave2 from "@/assets/images/wave2.png";
+import wave3 from "@/assets/images/wave3.png";
+import wave4 from "@/assets/images/wave4.png";
 
 function Ship() {
   return (
