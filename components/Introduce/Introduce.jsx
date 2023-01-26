@@ -1,9 +1,7 @@
 function Introduce() {
   return (
     <div className="flex flex-col items-center pt-4 md:pt-10 2xl:pt-20 mx-11 md:mx-24 2xl:mx-36 mb-64 md:mb-32 2xl:mb-56 text-center text-[#F2F2F2] ">
-      <h2 className="text-3xl md:text-4xl 2xl:text-8xl font-bold md:mb-12 2xl:mb-10">
-        แนะนำค่าย
-      </h2>
+      <h2 className="topic md:mb-12 2xl:mb-10">แนะนำค่าย</h2>
       <p className="text-base md:text-xl 2xl:text-4xl font-normal">
         CS Camp 15
       </p>

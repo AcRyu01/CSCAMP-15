@@ -29,6 +29,9 @@ a {
   .banner-cloud {
     @apply absolute hidden md:block;
   }
+  .topic {
+    @apply text-3xl md:text-4xl 2xl:text-8xl font-bold;
+  }
 }
 
 @layer utilities {
