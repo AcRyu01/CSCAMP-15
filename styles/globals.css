@@ -32,6 +32,9 @@ a {
   .topic {
     @apply text-3xl md:text-4xl 2xl:text-8xl font-bold;
   }
+  .island {
+    @apply relative w-[45px] md:w-[85px] 2xl:w-[150px] h-[45px] md:h-[85px] 2xl:h-[150px] cursor-pointer;
+  }
 }
 
 @layer utilities {
