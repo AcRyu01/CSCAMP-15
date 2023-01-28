@@ -1,8 +1,8 @@
 import React from "react";
 import Head from "next/head";
 
-// import Navbar from '@/components/Navbar/Navbar'
-// import Footer from '@/components/Footer/Footer'
+import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/Footer/Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -16,8 +16,10 @@ const Layout = ({ children }) => {
 
       <div className="flex min-h-screen flex-col">
         {/* <Navbar /> */}
+        <Navbar />
         <div className="app-main relative flex grow flex-col">{children}</div>
         {/* <Footer /> */}
+        <Footer />
       </div>
 
       <style jsx scoped>{`
