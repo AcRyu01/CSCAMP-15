@@ -18,7 +18,7 @@ function Navbar() {
       <div className="flex items-center justify-between bg-jungle-mist-300 py-[5px] px-[8px] md:py-[4px] md:px-[13px] 2xl:py-[10px] 2xl:px-[30px]">
         <div className="flex">
           <Image
-            className="w-[55px] h-[] md:h-auto md:w-[127px] rounded-md mr-[4px] md:mr-[13px] 2xl:mr-[50px]"
+            className="w-[55px] h-[26px] md:h-auto md:w-[127px] rounded-md mr-[4px] md:mr-[13px] 2xl:mr-[50px]"
             src={kmitl_logo}
           />
           <Image
@@ -26,7 +26,7 @@ function Navbar() {
             src={camp_logo}
           />
         </div>
-        <ul className="flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]  left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
+        <ul className="flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
           {Links.map((link) => (
             <li key={link.name} className="md:ml-7  md:z-auto z-[-1]">
               <a
