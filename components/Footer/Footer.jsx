@@ -55,7 +55,7 @@ function Footer() {
         </ul>
       </div>
       <div className="relative right-[22px] top-[25px] ">
-        <div className="relative flex left-[270px] 2xl:left-[350px] pb-[33px] 2xl:pb-[56px]">
+        <div className="relative flex md:left-[270px] 2xl:left-[350px] pb-[33px] 2xl:pb-[56px]">
           <Image
             className=" w-[58px] h-[58px] 2xl:w-[100px] 2xl:h-[100px] rounded-full mx-[21px] 2xl:mx-[33px]"
             src={camp_logo}
