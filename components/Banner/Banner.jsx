@@ -5,8 +5,6 @@ import Ship from "./Ship";
 import cloud1 from "@/assets/images/Cloud1.png";
 import cloud2 from "@/assets/images/Cloud2.png";
 
-import { ScrollPage } from "react-scroll-motion";
-
 function Banner() {
   const countDownDate = "2023-02-25";
   // For avoid React Hydration bug.
