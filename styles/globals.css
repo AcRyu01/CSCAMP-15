@@ -44,4 +44,7 @@ a {
   .bg-banner {
     background: linear-gradient(358.09deg, #fba16d 8.52%, #accdd4 73.66%);
   }
+  .bg-content {
+    background: linear-gradient(180deg, #2cb49c 14.26%, #011c27 89%);
+  }
 }
