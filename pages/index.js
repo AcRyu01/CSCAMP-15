@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import Introduce from "@/components/Introduce/Introduce";
+import Condition from "@/components/Condition/Condition";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <div className="bg-content">
         <Introduce />
         <div className="h-60 text-center text-white">เงื่อนไข dummy</div>
+        <Condition />
       </div>
     </>
   );

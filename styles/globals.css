@@ -41,6 +41,20 @@ a {
     scrollbar-width: none; /* Firefox */
   }
 
+  .backface-visibility-hidden {
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+  }
+
+  .backface-visibility-visible {
+    backface-visibility: visible;
+    -moz-backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    -ms-backface-visibility: visible;
+  }
+
   .bg-banner {
     background: linear-gradient(358.09deg, #fba16d 8.52%, #accdd4 73.66%);
   }
