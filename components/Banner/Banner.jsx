@@ -6,7 +6,7 @@ import cloud1 from "@/assets/images/Cloud1.png";
 import cloud2 from "@/assets/images/Cloud2.png";
 
 function Banner() {
-  const countDownDate = "2023-02-25";
+  const countDownDate = "2023-04-25";
   // For avoid React Hydration bug.
   const CountdownTimer = dynamic(() => import("./CountdownTimer"), {
     ssr: false,
