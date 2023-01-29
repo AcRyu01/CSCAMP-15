@@ -73,7 +73,7 @@ function ProgramUse() {
                   ก็สามารถใช้ได้เช่นกัน
                 </div>
               </div>
-              <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[65px] md:mt-[10.5px] 2xl:mt-[185px]">
+              <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[65px] md:mt-[10.5px] 2xl:mt-[130px]">
                 <a href="https://code.visualstudio.com/">
                   <Image
                     src={vscode_link}
@@ -89,39 +89,6 @@ function ProgramUse() {
               </div>
             </div>
           </div>
-
-          {/*<div>
-            <Image src={paper} className="relative w-[570px]" />
-            <div className="absolute w-auto h-auto top-[-100px] px-[56px]">
-              <Image src={vscode} className="relative max-w-[200px] m-auto" />
-              <div>
-                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900  ">
-                  Visual Studio Code
-                </div>
-                <div className="border-[4px] border-black  opacity-50 rounded  mt-[22px] mb-[41px]"></div>
-                <div className="md:text-[20px] 2xl:text-[32px] text-tundora-700">
-                  <div> ใช้ Visual Studio Code เป็น editor</div>
-                  <div>ในการเขียนโค้ดภาษาไพทอน</div>
-                  <div>ซึ่งถ้าน้อง ๆ ถนัดใช้ตัวอื่น ๆ </div>
-                  ก็สามารถใช้ได้เช่นกัน
-                </div>
-              </div>
-              <div className="flex space-x-[64px] justify-center mt-[185px]">
-                <a href="https://code.visualstudio.com/">
-                  <Image
-                    src={vscode_link}
-                    className="max-w-[197px] rounded-[10px]"
-                  />
-                </a>
-                <a href="https://code.visualstudio.com/download">
-                  <Image
-                    src={download_link}
-                    className="max-w-[197px] rounded-[10px]"
-                  />
-                </a>
-              </div>
-            </div>
-  </div>*/}
         </div>
       </div>
     </>
