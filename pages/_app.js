@@ -34,9 +34,11 @@ const sukhumvitSet = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
+    <>
       <main className={`${sukhumvitSet.variable} font-primary`}>
+        <Layout>
         <Component {...pageProps} />
+        </Layout>
       </main>
       <style jsx global>
         {`
@@ -45,6 +47,6 @@ export default function App({ Component, pageProps }) {
           }
         `}
       </style>
-    </Layout>
+    </>
   );
 }
