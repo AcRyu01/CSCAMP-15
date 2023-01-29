@@ -20,10 +20,12 @@ function Navbar() {
           <Image
             className="w-[55px] h-[26px] md:h-auto md:w-[127px] rounded-md mr-[4px] md:mr-[13px] 2xl:mr-[50px]"
             src={kmitl_logo}
+            alt="kmitl_logo"
           />
           <Image
             className="w-[26px] h-[26px]  md:h-auto md:w-[60px] rounded-full"
             src={camp_logo}
+            alt="camp_logo"
           />
         </div>
         <ul className="flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">

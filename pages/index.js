@@ -16,10 +16,8 @@ export default function Home() {
         <Condition />
         <Schedule />
         <Timetable />
-        <ProgramUse/>
+        <ProgramUse />
       </div>
-       
-
     </>
   );
 }

@@ -24,10 +24,10 @@ const FlipCard = ({ imgBack, imgFront }) => {
       <motion.div
         className="relative"
         whileHover={{ scale: 1.1 }}
-        transition={{type: "spring"}}
+        transition={{ type: "spring" }}
       >
         <motion.div
-          key={imgFront}
+          // key={imgFront}
           className="flip-card w-full h-auto backface-visibility-hidden absolute"
           initial={{ rotateY: 180 }}
           animate={fControls}
@@ -36,7 +36,7 @@ const FlipCard = ({ imgBack, imgFront }) => {
           <Image src={imgFront} alt="" width="0" height="0" sizes="100vw" />
         </motion.div>
         <motion.div
-          key={imgBack}
+          // key={imgBack}
           className="flip-card w-full h-auto backface-visibility-hidden absolute"
           animate={bControls}
           onClick={handleClick}

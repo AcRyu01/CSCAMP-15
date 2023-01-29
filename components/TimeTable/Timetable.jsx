@@ -92,7 +92,10 @@ function Timetable() {
   const [selectedIsland, setSelectedIsland] = useState(0);
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-[1200px] pt-52 md:pt-36 2xl:pt-32 mx-2 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] ">
+    <div
+      id="timetable"
+      className="flex flex-col items-center justify-center max-w-[1200px] pt-52 md:pt-36 2xl:pt-32 mx-2 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
+    >
       <h2 className="topic mb-7 md:mb-14 2xl:mb-24">ตารางเวลา</h2>
       <div className="h-[560px] max-w-[1200px] w-full mx-4 md:mx-20 2xl:mx-28">
         <div className="relative flex justify-between items-center w-full mb-7 text-black">

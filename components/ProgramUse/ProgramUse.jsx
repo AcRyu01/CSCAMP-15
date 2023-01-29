@@ -9,7 +9,10 @@ import paper from "assets/images/paper.png";
 function ProgramUse() {
   return (
     <>
-      <div className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] text-white text-center ">
+      <div
+        id="programUse"
+        className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center "
+      >
         <div className="text-[48px] 2xl:text-[96px] ">
           โปรแกรมที่ใช้ในกิจกรรม
         </div>
@@ -18,11 +21,13 @@ function ProgramUse() {
             <Image
               src={paper}
               className="m-auto absolute md:relative w-[293px] 2xl:w-[570px]"
+              alt="paper"
             />
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] 2xl:px-[56px]">
               <Image
                 src={discord}
                 className="relative w-[100px] 2xl:w-[200px] m-auto"
+                alt="discord"
               />
               <div>
                 <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900  ">
@@ -36,16 +41,22 @@ function ProgramUse() {
                 </div>
               </div>
               <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[92px] md:mt-[10.5px] 2xl:mt-[185px]">
-                <a href="https://discord.com/download">
+                <a href="https://discord.com" target="_blank" rel="noreferrer">
                   <Image
                     src={discord_link}
                     className="w-[101px]  2xl:w-[197px]  rounded-[10px]"
+                    alt="discord_link"
                   />
                 </a>
-                <a href="https://discord.com/download">
+                <a
+                  href="https://discord.com/download"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={download_link}
                     className="w-[101px] 2xl:w-[197px] rounded-[10px]"
+                    alt="download_link"
                   />
                 </a>
               </div>
@@ -55,11 +66,13 @@ function ProgramUse() {
             <Image
               src={paper}
               className="m-auto absolute md:relative w-[293px] 2xl:w-[570px] "
+              alt="paper"
             />
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] md:px-[15px] 2xl:px-[56px]">
               <Image
                 src={vscode}
                 className="relative w-[100px] 2xl:w-[200px] m-auto"
+                alt="vscode"
               />
               <div>
                 <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900  ">
@@ -74,16 +87,26 @@ function ProgramUse() {
                 </div>
               </div>
               <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[65px] md:mt-[10.5px] 2xl:mt-[130px]">
-                <a href="https://code.visualstudio.com/">
+                <a
+                  href="https://code.visualstudio.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={vscode_link}
                     className="w-[101px]  2xl:w-[197px]  rounded-[10px]"
+                    alt="vscode_link"
                   />
                 </a>
-                <a href="https://code.visualstudio.com/download">
+                <a
+                  href="https://code.visualstudio.com/download"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Image
                     src={download_link}
                     className="w-[101px] 2xl:w-[197px] rounded-[10px]"
+                    alt="download_link"
                   />
                 </a>
               </div>
