@@ -8,4 +8,6 @@ import BCard3 from "@/assets/images/Condition/Bcard3.png";
 const fCards = [FCard1, FCard2, FCard3];
 const bCards = [BCard1, BCard2, BCard3];
 
-export { fCards, bCards };
+const card = { fCards, bCards };
+
+export default card;
