@@ -20,6 +20,9 @@ module.exports = {
         primary: ["var(--font-sukhumvitSet)"],
         // primary: ["var(--font-sukhumvitSet)", ...fontFamily.sans],
       },
+      dropShadow: {
+        island: "0px 0px 40px 15px rgba(255,246,74,0.75)",
+      },
       backgroungImage:{
         'pragram-paper':"url('/assete/image/paper.png')"
       },
