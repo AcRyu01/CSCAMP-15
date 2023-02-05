@@ -47,6 +47,11 @@ a {
     scrollbar-width: none; /* Firefox */
   }
 
+  .dropShadow {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);
+  }
+
   .backface-visibility-hidden {
     backface-visibility: hidden;
     -moz-backface-visibility: hidden;
