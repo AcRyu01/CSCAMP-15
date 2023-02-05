@@ -13,7 +13,7 @@ function Schedule() {
 
   const scrollBottle = useTransform(scrollYProgress, [1, 0], [0.1, 4]);
 
-  const [bottle, setbottle] = useState(0);
+  const [bottle, setbottle] = useState(1);
   const controlsContainer = useAnimation();
   const controls0 = useAnimation();
   const controls1 = useAnimation();
@@ -48,7 +48,6 @@ function Schedule() {
     if (bottle == 1) {
       controlsContainer.start({
         opacity: 1,
-        y: 0,
         x: bottleRef.current.offsetWidth * 1.5,
         transition: { type: "tween", duration: 0.15 },
       });
@@ -59,7 +58,6 @@ function Schedule() {
     } else if (bottle == 2) {
       controlsContainer.start({
         opacity: 1,
-        y: 0,
         x: bottleRef.current.offsetWidth * 0.5,
         transition: { type: "tween", duration: 0.15 },
       });
@@ -70,7 +68,6 @@ function Schedule() {
     } else if (bottle == 3) {
       controlsContainer.start({
         opacity: 1,
-        y: 0,
         x: -(bottleRef.current.offsetWidth * 0.5),
         transition: { type: "tween", duration: 0.15 },
       });
@@ -81,7 +78,6 @@ function Schedule() {
     } else {
       controlsContainer.start({
         opacity: 1,
-        y: 0,
         x: -(bottleRef.current.offsetWidth * 1.5),
         transition: { type: "tween", duration: 0.15 },
       });
@@ -93,81 +89,81 @@ function Schedule() {
   }, [bottle]);
 
   return (
-      <div
-        id="schedule"
-        className="h-[70vh] md:h-[60vh] lg:h-[85vh] flex flex-col justify-evenly bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
-        ref={containerRef}
+    <div
+      id="schedule"
+      className="h-[70vh] md:h-[60vh] lg:h-[85vh] flex flex-col justify-evenly bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
+      ref={containerRef}
+    >
+      <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
+        กำหนดการ
+      </h2>
+      <motion.div
+        className="flex flex-nowrap justify-center shrink-0 "
+        animate={controlsContainer}
       >
-        <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
-          กำหนดการ
-        </h2>
         <motion.div
-          className="flex flex-nowrap justify-center shrink-0 "
-          animate={controlsContainer}
+          className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
+          variants={bottleVaraiants}
+          initial="visible"
+          animate={controls0}
+          ref={bottleRef}
         >
-          <motion.div
-            className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
-            variants={bottleVaraiants}
-            initial="visible"
-            animate={controls0}
-            ref={bottleRef}
-          >
-            <Image
-              className="w-[80%] h-[80%]"
-              src={bottles[0].src}
-              alt={`bottles${bottles[0].index}`}
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-          </motion.div>
-          <motion.div
-            className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
-            variants={bottleVaraiants}
-            initial="visible"
-            animate={controls1}
-          >
-            <Image
-              className="w-[80%] h-[80%]"
-              src={bottles[1].src}
-              alt={`bottles${bottles[1].index}`}
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-          </motion.div>
-          <motion.div
-            className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
-            variants={bottleVaraiants}
-            initial="visible"
-            animate={controls2}
-          >
-            <Image
-              className="w-[80%] h-[80%]"
-              src={bottles[2].src}
-              alt={`bottles${bottles[2].index}`}
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-          </motion.div>
-          <motion.div
-            className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
-            variants={bottleVaraiants}
-            initial="visible"
-            animate={controls3}
-          >
-            <Image
-              className="w-[80%] h-[80%]"
-              src={bottles[3].src}
-              alt={`bottles${bottles[3].index}`}
-              width="0"
-              height="0"
-              sizes="100vw"
-            />
-          </motion.div>
+          <Image
+            className="w-[80%] h-[80%]"
+            src={bottles[0].src}
+            alt={`bottles${bottles[0].index}`}
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
         </motion.div>
-      </div>
+        <motion.div
+          className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
+          variants={bottleVaraiants}
+          initial="visible"
+          animate={controls1}
+        >
+          <Image
+            className="w-[80%] h-[80%]"
+            src={bottles[1].src}
+            alt={`bottles${bottles[1].index}`}
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </motion.div>
+        <motion.div
+          className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
+          variants={bottleVaraiants}
+          initial="visible"
+          animate={controls2}
+        >
+          <Image
+            className="w-[80%] h-[80%]"
+            src={bottles[2].src}
+            alt={`bottles${bottles[2].index}`}
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </motion.div>
+        <motion.div
+          className="w-[200px] h-[300px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0"
+          variants={bottleVaraiants}
+          initial="visible"
+          animate={controls3}
+        >
+          <Image
+            className="w-[80%] h-[80%]"
+            src={bottles[3].src}
+            alt={`bottles${bottles[3].index}`}
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </motion.div>
+      </motion.div>
+    </div>
   );
 }
 
