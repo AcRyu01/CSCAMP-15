@@ -6,6 +6,8 @@ import Introduce from "@/components/Introduce/Introduce";
 import Condition from "@/components/Condition/Condition";
 import Timetable from "@/components/TimeTable/Timetable";
 import ProgramUse from "@/components/ProgramUse/ProgramUse";
+import Sponsor from "@/components/Sponsor/Sponsor";
+
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <Schedule />
         <Timetable />
         <ProgramUse />
+        <Sponsor />
+
       </div>
     </>
   );
