@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import Image from "next/image";
 
-const FlipCard = ({ imgBack, imgFront }) => {
+const FlipCard = ({ imgBack, imgFront, message = "", subMessage = [] }) => {
   const [flipped, setFlipped] = useState(false);
   const bControls = useAnimationControls();
   const fControls = useAnimationControls();
@@ -23,21 +23,26 @@ const FlipCard = ({ imgBack, imgFront }) => {
     <>
       <motion.div
         className="relative"
+        initial={{}}
         whileHover={{ scale: 1.1 }}
         transition={{ type: "spring" }}
       >
         <motion.div
-          // key={imgFront}
-          className="flip-card w-full h-auto backface-visibility-hidden absolute"
+          className="flip-card w-full h-auto backface-visibility-hidden absolute dropShadow flex justify-center"
           initial={{ rotateY: 180 }}
           animate={fControls}
           onClick={handleClick}
         >
           <Image src={imgFront} alt="" width="0" height="0" sizes="100vw" />
+          <div className="absolute top-[60%] 2xl:top-[65%] w-[90%] text-[#F2F2F2] text-center">
+            <p className="text-xs font-thin md:text-sm md:font-normal 2xl:font-semibold 2xl:text-lg">{message} </p>
+            {subMessage.map((text, i) => (
+              <p key={i} className="text-[9px] font-[50] md:text-xs md:font-extralight 2xl:font-light 2xl:text-sm">{text}</p>
+            ))}
+          </div>
         </motion.div>
         <motion.div
-          // key={imgBack}
-          className="flip-card w-full h-auto backface-visibility-hidden absolute"
+          className="flip-card w-full h-auto backface-visibility-hidden absolute dropShadow"
           animate={bControls}
           onClick={handleClick}
         >
