@@ -15,7 +15,7 @@ function ProgramUse() {
         id="programUse"
         className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center "
       >
-        <div className="text-[48px] 2xl:text-[96px] ">
+        <div className="text-3xl md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold">
           โปรแกรมที่ใช้ในกิจกรรม
         </div>
         <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[60px] 2xl:mt-[188px] md:space-x-[64px] 2xl:space-x-[56px]">
@@ -28,7 +28,7 @@ function ProgramUse() {
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] 2xl:px-[56px] ">
               <Image
                 src={discord}
-                className="relative w-[100px] 2xl:w-[200px] m-auto"
+                className="relative w-[100px] 2xl:w-[200px] m-auto dropShadow"
                 alt="discord"
               />
               <div>
@@ -46,7 +46,7 @@ function ProgramUse() {
                 <a href="https://discord.com" target="_blank" rel="noreferrer">
                   <Image
                     src={discord_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px]"
+                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
                     alt="discord_link"
                   />
                 </a>
@@ -57,7 +57,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={download_link}
-                    className="w-[101px] 2xl:w-[197px] rounded-[10px]"
+                    className="w-[101px] 2xl:w-[197px] rounded-[10px] dropShadow"
                     alt="download_link"
                   />
                 </a>
@@ -73,7 +73,7 @@ function ProgramUse() {
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] md:px-[20px] 2xl:px-[56px]">
               <Image
                 src={vscode}
-                className="relative w-[100px] 2xl:w-[200px] m-auto"
+                className="relative w-[100px] 2xl:w-[200px] m-auto dropShadow"
                 alt="vscode"
               />
               <div>
@@ -103,7 +103,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={python_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px]"
+                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
                     alt="python_link"
                   />
                 </a>
@@ -116,7 +116,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={vscode_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px]"
+                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
                     alt="vscode_link"
                   />
                 </a>
@@ -127,7 +127,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={download_link}
-                    className="w-[101px] 2xl:w-[197px] rounded-[10px]"
+                    className="w-[101px] 2xl:w-[197px] rounded-[10px] dropShadow"
                     alt="download_link"
                   />
                 </a>

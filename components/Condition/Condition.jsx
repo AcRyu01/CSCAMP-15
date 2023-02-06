@@ -10,14 +10,14 @@ const Condition = () => {
           เงื่อนไขการสมัคร
         </h2>
         <Container className="flex justify-around flex-wrap-reverse mt-10">
-          <div className="w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
+          <div className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
             <FlipCard
               imgBack={cards.bCards[0]}
               imgFront={cards.fCards[0]}
               message={"เป็นนักเรียนมัธยมศึกษาปีที่ 4 หรือ 5 ปีการศึกษา 2565"}
             />
           </div>
-          <div className="w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
+          <div className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
             <FlipCard
               imgBack={cards.bCards[1]}
               imgFront={cards.fCards[1]}
@@ -26,7 +26,7 @@ const Condition = () => {
               }
             />
           </div>
-          <div className="w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
+          <div className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]">
             <FlipCard
               imgBack={cards.bCards[2]}
               imgFront={cards.fCards[2]}

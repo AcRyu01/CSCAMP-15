@@ -6,7 +6,7 @@ function Card({ data, selectedIsland }) {
   return (
     <div className="relative h-fit md:h-[300px] 2xl:h-[360px] flex flex-col md:grid md:grid-cols-5 text-[#313131] rounded-[20px]  ">
       <div className="absolute w-full h-[520px] xs:h-[400px] md:h-[350px] 2xl:h-[400px] z-0">
-        <Image src={paper} alt="paper" fill className="" priority />
+        <Image src={paper} alt="paper" fill className="dropShadow" priority />
       </div>
       <div className="mt-12 md:mb-12 w-[70%] mx-auto z-10 flex flex-col justify-end items-center md:row-auto md:col-span-2 ">
         <div className="relative w-[114px] md:w-[180px] 2xl:w-[270px] h-[86px] md:h-[135px] 2xl:h-[202px]">

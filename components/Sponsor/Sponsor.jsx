@@ -13,12 +13,12 @@ function Sponsor() {
         <div className="  text-white md:text-[24px] 2xl:text-[36px] text-center space-y-[55px] pt-[24px] ">
           <div className="">สนับสนุนโดย</div>
           <div className="flex space-x-[67px] md:text-[20px] 2xl:text-[36px] justify-center flex-warp">
-            <div>sponsor</div>
+            {/* <div>sponsor</div>
             <span>sponsor</span>
             <div>sponsor</div>
             <div>sponsor</div>
             <span>sponsor</span>
-            <div>sponsor</div>
+            <div>sponsor</div> */}
           </div>
         </div>
       </div>
