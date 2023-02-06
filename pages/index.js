@@ -15,8 +15,7 @@ export default function Home() {
       <div className="bg-content">
         <Introduce />
         <Condition />
-        {/* <Schedule /> */}
-        {/* for dev only */}
+        <Schedule />
         <Timetable />
         <ProgramUse />
         <Sponsor />

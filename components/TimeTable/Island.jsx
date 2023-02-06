@@ -5,33 +5,20 @@ import island3 from "@/assets/images/island3.png";
 import island4 from "@/assets/images/island4.png";
 import island5 from "@/assets/images/island5.png";
 import islandShip from "@/assets/images/islandShip.png";
-import { useEffect, useState } from "react";
 
 function Island({ selectedIsland, setSelectedIsland, data }) {
-  const [distance, setDistance] = useState("16%");
+  const shipAnimation = `${
+    selectedIsland === 4
+      ? "w-[102%]"
+      : selectedIsland === 3
+      ? "w-[82%]"
+      : selectedIsland === 2
+      ? "w-[60%]"
+      : selectedIsland === 1
+      ? "w-[38%]"
+      : "w-[16%]"
+  }`;
 
-  useEffect(() => {
-    switch (selectedIsland) {
-      case 0:
-        setDistance("16%");
-        break;
-      case 1:
-        setDistance("38%");
-        break;
-      case 2:
-        setDistance("60%");
-        break;
-      case 3:
-        setDistance("82%");
-        break;
-      case 4:
-        setDistance("102%");
-        break;
-    }
-  }, [selectedIsland]);
-
-  console.log(distance);
-  console.log(selectedIsland);
   return (
     <>
       {/* tablet , pc */}
@@ -39,8 +26,8 @@ function Island({ selectedIsland, setSelectedIsland, data }) {
         <div className="relative flex justify-between items-center w-full mb-7 text-black">
           {/* Island Ship */}
           <div
-            key={distance}
-            className={`absolute -mt-8 h-fit flex w-[${distance}]`}
+            key={selectedIsland}
+            className={`absolute -mt-8 h-fit flex ${shipAnimation}`}
           >
             <div
               className={`relative moveShip w-[28px] lg:w-[42px] h-[28px] lg:h-[42px]`}
@@ -258,7 +245,6 @@ function Island({ selectedIsland, setSelectedIsland, data }) {
           bottom: 15%;
           position: absolute;
           animation: run 5s forwards;
-
         }
 
         @keyframes run {
