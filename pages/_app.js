@@ -37,7 +37,7 @@ export default function App({ Component, pageProps }) {
     <>
       <main className={`${sukhumvitSet.variable} font-primary`}>
         <Layout>
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         </Layout>
       </main>
       <style jsx global>

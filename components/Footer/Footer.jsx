@@ -17,8 +17,8 @@ function Footer() {
     },
     {
       img: instagram,
-      name: "@cskmitl",
-      ref: "https://www.instagram.com/cskmitl/",
+      name: "@cscamp.kmitl",
+      ref: "https://www.instagram.com/cscamp.kmitl",
     },
     {
       img: twitter,
@@ -27,8 +27,8 @@ function Footer() {
     },
     {
       img: mail,
-      name: "kmitlcscamp@gmail.com",
-      ref: "mailto:kmitlcscamp@gmail.com",
+      name: "kmitlcscamp15@gmail.com",
+      ref: "mailto:kmitlcscamp15@gmail.com",
     },
     {
       img: telephone,
@@ -39,15 +39,15 @@ function Footer() {
   return (
     <div
       id="contact"
-      className="text-concrete-100 overflow-hidden bg-domino-500 w-full h-auto  table-row md:flex md:justify-between"
+      className="text-concrete-100 overflow-hidden bg-[#927B59] w-full h-auto  table-row md:flex md:justify-between"
     >
-      <div className="w-[271px] h-[266px] m-auto md:m-0 pt-[12px] md:pl-[10px] 2xl:pt-[11px] 2xl:pl-[30px]">
+      <div className="w-[271px] h-[266px] m-auto md:m-0 pt-[18px] md:pl-[30px] 2xl:pt-[11px] ">
         <div className="text-center md:text-left text-[24px] 2xl:text-[32px] border-b md:border-0">
           ช่องทางการติดต่อ
         </div>
         <ul className="">
           {contact.map((contact) => (
-            <li key={contact.name} className="pt-[12px] pl-[32px] ">
+            <li key={contact.ref} className="pt-[12px] pl-[32px] ">
               <a
                 href={contact.ref}
                 className="flex items-center"
@@ -78,7 +78,7 @@ function Footer() {
             alt="kmitl_logo"
           />
         </div>
-        <div className=" text-center md:text-right text-[16px] 2xl:text-2xl pb-20">
+        <div className=" text-center md:text-right text-[16px] 2xl:text-2xl pb-20 px-[24px]">
           <div>จัดโดยคณะวิทยาศาสาตร์ สาขาวิทยาการคอมพิวเตอร์</div>
           <div>
             สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง เลขที่ 1 ซอยฉลองกรุง
