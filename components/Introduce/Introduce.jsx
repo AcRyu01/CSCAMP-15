@@ -2,7 +2,7 @@ function Introduce() {
   return (
     <div
       id="intro"
-      className="flex flex-col items-center pt-4 md:pt-10 2xl:pt-20 mx-11 md:mx-24 2xl:mx-36 mb-64 md:mb-32 2xl:mb-56 text-center text-[#F2F2F2] "
+      className="flex flex-col items-center mt-8 pt-4 md:pt-10 2xl:pt-20 mx-11 md:mx-24 2xl:mx-36 mb-64 md:mb-32 2xl:mb-56 text-center text-[#F2F2F2] "
     >
       <h2 className="topic mb-2 md:mb-12 2xl:mb-10">CS CAMP 15</h2>
       <p className="text-base tracking-wide leading-7 md:leading-9 2xl:leading-[50px] md:text-xl 2xl:text-4xl font-extralight md:max-w-[700px] 2xl:max-w-[1000px]">
