@@ -4,24 +4,55 @@ import island2 from "@/assets/images/island2.png";
 import island3 from "@/assets/images/island3.png";
 import island4 from "@/assets/images/island4.png";
 import island5 from "@/assets/images/island5.png";
-import islandDraft from "@/assets/images/islandDraft.png";
 import islandShip from "@/assets/images/islandShip.png";
+import { useEffect, useState } from "react";
 
 function Island({ selectedIsland, setSelectedIsland, data }) {
+  const [distance, setDistance] = useState("16%");
+
+  useEffect(() => {
+    switch (selectedIsland) {
+      case 0:
+        setDistance("16%");
+        break;
+      case 1:
+        setDistance("38%");
+        break;
+      case 2:
+        setDistance("60%");
+        break;
+      case 3:
+        setDistance("82%");
+        break;
+      case 4:
+        setDistance("102%");
+        break;
+    }
+  }, [selectedIsland]);
+
+  console.log(distance);
+  console.log(selectedIsland);
   return (
     <>
       {/* tablet , pc */}
       <div className="hidden sm:block">
         <div className="relative flex justify-between items-center w-full mb-7 text-black">
           {/* Island Ship */}
-          {/* <div className={`absolute -mt-8 left-20 w-[28px] h-[28px]`}>
-            <Image
-              src={islandShip}
-              alt="Island Ship"
-              fill
-              className="object-contain"
-            />
-          </div> */}
+          <div
+            key={distance}
+            className={`absolute -mt-8 h-fit flex w-[${distance}]`}
+          >
+            <div
+              className={`relative moveShip w-[28px] lg:w-[42px] h-[28px] lg:h-[42px]`}
+            >
+              <Image
+                src={islandShip}
+                alt="Island Ship"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
           {/* Island */}
           <div>
             <div
@@ -222,6 +253,23 @@ function Island({ selectedIsland, setSelectedIsland, data }) {
           </div>
         </div>
       </div>
+      <style>{`
+        .moveShip {
+          bottom: 15%;
+          position: absolute;
+          animation: run 5s forwards;
+
+        }
+
+        @keyframes run {
+          0% {
+            left: 0;
+          }
+          100% {
+            left: 100%;
+          }
+        }
+      `}</style>
     </>
   );
 }
