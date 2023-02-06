@@ -15,7 +15,7 @@ a {
 
 @layer base {
   html {
-    @apply font-primary;
+    @apply font-primary overflow-x-hidden;
   }
   body {
     @apply min-h-screen overflow-x-hidden;
@@ -33,7 +33,7 @@ a {
     @apply text-3xl md:text-4xl 2xl:text-8xl font-bold;
   }
   .island {
-    @apply relative w-[45px] md:w-[85px] 2xl:w-[150px] h-[45px] md:h-[85px] 2xl:h-[150px] cursor-pointer hover:scale-125;
+    @apply relative w-[75px] md:w-[85px] 2xl:w-[150px] h-[75px] md:h-[85px] 2xl:h-[150px] cursor-pointer hover:scale-125;
   }
 }
 

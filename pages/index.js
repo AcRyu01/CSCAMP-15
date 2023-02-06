@@ -8,7 +8,6 @@ import Timetable from "@/components/TimeTable/Timetable";
 import ProgramUse from "@/components/ProgramUse/ProgramUse";
 import Sponsor from "@/components/Sponsor/Sponsor";
 
-
 export default function Home() {
   return (
     <>
@@ -16,11 +15,11 @@ export default function Home() {
       <div className="bg-content">
         <Introduce />
         <Condition />
-        <Schedule />
+        {/* <Schedule /> */}
+        {/* for dev only */}
         <Timetable />
         <ProgramUse />
         <Sponsor />
-
       </div>
     </>
   );
