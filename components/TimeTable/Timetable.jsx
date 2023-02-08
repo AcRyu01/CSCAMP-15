@@ -1,12 +1,4 @@
-import Image from "next/image";
-import { useRef, useEffect, useState } from "react";
-import island1 from "@/assets/images/island1.png";
-import island2 from "@/assets/images/island2.png";
-import island3 from "@/assets/images/island3.png";
-import island4 from "@/assets/images/island4.png";
-import island5 from "@/assets/images/island5.png";
-import islandDraft from "@/assets/images/islandDraft.png";
-import islandShip from "@/assets/images/islandShip.png";
+import { useState } from "react";
 import Card from "./Card";
 import Island from "./Island";
 

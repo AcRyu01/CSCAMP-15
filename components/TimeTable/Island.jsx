@@ -1,4 +1,7 @@
 import Image from "next/image";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
+
 import island1 from "@/assets/images/island1.png";
 import island2 from "@/assets/images/island2.png";
 import island3 from "@/assets/images/island3.png";
@@ -7,27 +10,54 @@ import island5 from "@/assets/images/island5.png";
 import islandShip from "@/assets/images/islandShip.png";
 
 function Island({ selectedIsland, setSelectedIsland, data }) {
-  const shipAnimation = `${
-    selectedIsland === 4
-      ? "w-[102%]"
-      : selectedIsland === 3
-      ? "w-[82%]"
-      : selectedIsland === 2
-      ? "w-[60%]"
-      : selectedIsland === 1
-      ? "w-[38%]"
-      : "w-[16%]"
-  }`;
+  const ref = useRef(null);
+  const [width, setWidth] = useState(0);
+  const [per, setPer] = useState(0);
+  let calc = Math.round((width * per) / 100);
+
+  useEffect(() => {
+    setWidth(ref.current.clientWidth);
+    function handleWindowResize() {
+      setWidth(ref.current.clientWidth);
+    }
+
+    switch (selectedIsland) {
+      case 0:
+        setPer(0);
+        break;
+      case 1:
+        setPer(22);
+        break;
+      case 2:
+        setPer(45);
+        break;
+      case 3:
+        setPer(67);
+        break;
+      case 4:
+        setPer(90);
+        break;
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, [selectedIsland, width]);
 
   return (
     <>
       {/* tablet , pc */}
       <div className="hidden sm:block">
-        <div className="relative flex justify-between items-center w-full mb-7 text-black">
+        <div
+          ref={ref}
+          className="relative flex justify-between items-center w-full mb-7 text-black"
+        >
           {/* Island Ship */}
-          <div
-            key={selectedIsland}
-            className={`absolute -mt-8 h-fit flex ${shipAnimation}`}
+          <motion.div
+            animate={{ x: calc }}
+            transition={{ duration: 1 }}
+            className={`absolute z-30 -mt-8 ml-[10%]`}
           >
             <div
               className={`relative moveShip w-[28px] lg:w-[42px] h-[28px] lg:h-[42px]`}
@@ -39,7 +69,7 @@ function Island({ selectedIsland, setSelectedIsland, data }) {
                 className="object-contain"
               />
             </div>
-          </div>
+          </motion.div>
           {/* Island */}
           <div>
             <div
