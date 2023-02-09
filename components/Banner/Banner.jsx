@@ -7,6 +7,8 @@ import cloud2 from "@/assets/images/Cloud2.png";
 
 function Banner() {
   const countDownDate = "2023-02-13";
+  const currentDate = new Date().getDate();
+  const currentMonth = new Date().getMonth() + 1;
   // For avoid React Hydration bug.
   const CountdownTimer = dynamic(() => import("./CountdownTimer"), {
     ssr: false,
@@ -64,10 +66,12 @@ function Banner() {
             />
           </div>
           <p className="text-xl 2xl:text-3xl font-medium text-center">
-            นับถอยหลังเปิดรับลูกเรือ
+            {currentDate >= 13 && currentMonth >= 2
+              ? "นับถอยหลังปิดรับลูกเรือ"
+              : "นับถอยหลังเปิดรับลูกเรือ"}
           </p>
           <CountdownTimer targetDate={countDownDate} />
-          <button className="text-3xl 2xl:text-5xl font-normal text-white hover:text-black border-white border-[5px] md:border-[3px] 2xl:border-[5px] hover:border-transparent hover:bg-white rounded-[10px]  py-2 px-4 w-fit">
+          <button className="z-50 text-3xl 2xl:text-5xl font-normal text-white border-white border-[5px] md:border-[3px] 2xl:border-[5px] cursor-pointer hover:border-transparent hover:bg-white hover:text-jungle-green-500 rounded-[10px]  py-2 px-4 w-fit">
             เข้าร่วม
           </button>
         </div>
