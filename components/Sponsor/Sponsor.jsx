@@ -6,7 +6,7 @@ import WebFooter from "@/assets/images/WebFooter.png";
 function Sponsor() {
   return (
     <div>
-      <div className="absolute w-full bottom-0">
+      <div className="absolute w-full bottom-0 z-0">
         <Image src={WebFooter} alt="WebFooter" className="w-full " />
       </div>
       <div className="relative h-[272px] md:mb-[300px] 2xl:mb-[450px]  bg-black  bg-opacity-40  z-auto">

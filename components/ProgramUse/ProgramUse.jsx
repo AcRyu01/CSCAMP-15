@@ -13,7 +13,7 @@ function ProgramUse() {
     <>
       <div
         id="programUse"
-        className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center "
+        className="relative  xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center z-10"
       >
         <div className="text-3xl md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold">
           โปรแกรมที่ใช้ในกิจกรรม
