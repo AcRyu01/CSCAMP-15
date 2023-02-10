@@ -32,13 +32,13 @@ function Sponsor() {
         <Image src={WebFooter} alt="WebFooter" className="w-full " />
       </div>
       <div className="relative xs:mb-[338px] md:mb-[300px] 2xl:mb-[450px]  bg-black  bg-opacity-40  z-auto">
-        <div className="  text-white md:text-[24px] 2xl:text-[36px] text-center pt-[24px] ">
-          <div className="">สนับสนุนโดย</div>
-          <ul className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center">
+        <div className="  text-white md:text-[24px] 2xl:text-[36px] text-center pt-[24px]  ">
+          <div>สนับสนุนโดย</div>
+          <ul className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] ">
             {sponsor.map((logo) => (
               <li key={logo.name} className="py-[24px] md:py-[12px] ">
                 <Image
-                  className="w-[75px]  2xl:w-[150px] mx-[45px] 2xl:mx-[90px]"
+                  className="w-[75px] md:w-auto max-w-[300px] mx-[45px] 2xl:mx-[90px]"
                   src={logo.img}
                   alt="sponsor"
                 />
