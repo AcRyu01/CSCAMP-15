@@ -14,16 +14,16 @@ function Navbar() {
     { name: "ช่องทางการติดต่อ", href: "#contact" },
   ];
   return (
-    <div className="hidden md:block border-b sticky z-50 border-white w-full h-auto top-0 left-0 ">
+    <div className=" hidden md:block border-b fixed z-50 border-white w-full h-auto left-0 ">
       <div className="flex items-center justify-between bg-jungle-mist-300 py-[5px] px-[8px] md:py-[4px] md:px-[13px] 2xl:py-[10px] 2xl:px-[30px]">
         <div className="flex">
           <Image
-            className="w-[55px] h-[26px] md:h-auto md:w-[127px] rounded-md mr-[4px] md:mr-[13px] 2xl:mr-[50px]"
+            className="w-[55px] h-[26px] md:h-[27px] md:w-[53px] 2xl:h-[48px] 2xl:w-[100px] rounded-md mr-[4px] md:mr-[13px] 2xl:mr-[50px]"
             src={kmitl_logo}
             alt="kmitl_logo"
           />
           <Image
-            className="w-[26px] h-[26px]  md:h-auto md:w-[60px] rounded-full"
+            className="w-[26px] h-[26px] 2xl:h-[49px] 2xl:w-[50px] rounded-full"
             src={camp_logo}
             alt="camp_logo"
           />
