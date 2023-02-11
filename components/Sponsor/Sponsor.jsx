@@ -19,7 +19,7 @@ const containerVariants = {
       delay: 0.4,
       duration: 0.4,
       when: "beforeChildren",
-      staggerChildren: 0.3,
+      staggerChildren: 0.4,
     },
   },
 };
@@ -34,8 +34,6 @@ const childVariants = {
     scale: 1,
     transition: {
       duration: 0.4,
-      when: "beforeChildren",
-      staggerChildren: 0.3,
     },
   },
 };
