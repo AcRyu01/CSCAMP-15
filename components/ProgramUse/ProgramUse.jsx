@@ -15,10 +15,10 @@ function ProgramUse() {
         id="programUse"
         className="relative  xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center z-10"
       >
-        <div className="text-3xl md:text-4xl xl:text-[3vw] 2xl:text-[4.5vw] text-[#F2F2F2] font-bold">
+        <div className="text-3xl md:text-4xl xl:text-[3vw] 2xl:text-[4.2vw] text-[#F2F2F2] font-bold">
           โปรแกรมที่ใช้ในกิจกรรม
         </div>
-        <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[80px] 2xl:mt-[188px] md:space-x-[64px] 2xl:space-x-[56px]">
+        <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[80px] 2xl:mt-[128px] md:space-x-[64px] 2xl:space-x-[56px]">
           <div>
             <Image
               src={paper}
