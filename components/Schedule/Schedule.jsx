@@ -1,19 +1,20 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import bottles from "./bottles";
-import { animate, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const containerVariants = {
   hidden: {
     opacity: 0,
-    y: 100,
+    y: 200,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.6,
-      type: "tween",
+      duration: 1,
+      type: "spring",
+      delay: 0.4,
     },
   },
 };
@@ -35,10 +36,6 @@ const bottleVaraiants = {
       duration: 0.8,
       type: "tween",
     },
-  },
-  hover: {
-    scale: 1.1,
-    opacity: 1,
   },
 };
 
@@ -298,13 +295,27 @@ function Schedule() {
       id="schedule"
       className="h-[350px] md:h-[600px] lg:h-[800px] flex flex-col bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
       ref={containerRef}
-      animate={controlsContainer}
-      variants={containerVariants}
+      animate={{
+        transition: {
+          when: "beforeChildren",
+          staggerChildren: 1,
+        },
+      }}
     >
-      <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
+      <motion.h2
+        className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center"
+        initial={"hidden"}
+        animate={controlsContainer}
+        variants={containerVariants}
+      >
         กำหนดการ
-      </h2>
-      <div className="flex justify-center shrink-0 mt-10">
+      </motion.h2>
+      <motion.div
+        className="flex justify-center shrink-0 mt-10"
+        initial={"hidden"}
+        animate={controlsContainer}
+        variants={containerVariants}
+      >
         <motion.div
           className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
           variants={bottleVaraiants}
@@ -378,7 +389,7 @@ function Schedule() {
             sizes="100vw"
           />
         </motion.div>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
