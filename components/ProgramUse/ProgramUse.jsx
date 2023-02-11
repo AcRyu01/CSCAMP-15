@@ -32,7 +32,7 @@ function ProgramUse() {
                 alt="discord"
               />
               <div>
-                <div className=" md:text-[32px] 2xl:text-[36px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
+                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
                   Discord
                 </div>
                 <div>
