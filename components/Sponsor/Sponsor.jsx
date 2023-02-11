@@ -1,30 +1,75 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import WebFooter from "@/assets/images/WebFooter.png";
 import samsung from "@/assets/images/samsung.png";
 import borntoDev from "@/assets/images/borntoDev.png";
 import DPTF from "@/assets/images/DPTF.png";
 import FLG from "@/assets/images/FLG.png";
+import { motion, useAnimation, useInView } from "framer-motion";
+
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.4,
+      duration: 0.4,
+      when: "beforeChildren",
+      staggerChildren: 0.4,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.6,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+    },
+  },
+};
+
+const sponsor = [
+  {
+    img: samsung,
+    name: "samsung",
+  },
+  {
+    img: borntoDev,
+    name: "borntoDev",
+  },
+  {
+    img: FLG,
+    name: "FLG",
+  },
+  {
+    img: DPTF,
+    name: "DPTF",
+  },
+];
 
 function Sponsor() {
-  let sponsor = [
-    {
-      img: samsung,
-      name: "samsung",
-    },
-    {
-      img: borntoDev,
-      name: "borntoDev",
-    },
-    {
-      img: FLG,
-      name: "FLG",
-    },
-    {
-      img: DPTF,
-      name: "DPTF",
-    },
-  ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const controlsContainer = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controlsContainer.start("visible");
+    } else {
+      controlsContainer.set("hidden");
+    }
+  }, [isInView]);
 
   return (
     <div>
@@ -32,20 +77,31 @@ function Sponsor() {
         <Image src={WebFooter} alt="WebFooter" className="w-full " />
       </div>
       <div className="relative xs:mb-[338px] md:mb-[300px] 2xl:mb-[450px]  bg-black  bg-opacity-40  z-auto">
-        <div className="  text-white md:text-[24px] 2xl:text-[36px] text-center pt-[24px]  ">
+        <motion.div
+          className="  text-white md:text-[24px] 2xl:text-[36px] text-center pt-[24px]"
+          ref={ref}
+          variants={containerVariants}
+          animate={controlsContainer}
+        >
           <div>สนับสนุนโดย</div>
-          <ul className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] ">
+          <motion.ul
+            className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] "
+          >
             {sponsor.map((logo) => (
-              <li key={logo.name} className="py-[24px] md:py-[12px] ">
+              <motion.li
+                key={logo.name}
+                className="py-[24px] md:py-[12px] "
+                variants={childVariants}
+              >
                 <Image
                   className="w-[75px] md:w-auto max-w-[300px] mx-[45px] 2xl:mx-[90px]"
                   src={logo.img}
                   alt="sponsor"
                 />
-              </li>
+              </motion.li>
             ))}
-          </ul>
-        </div>
+          </motion.ul>
+        </motion.div>
       </div>
     </div>
   );
