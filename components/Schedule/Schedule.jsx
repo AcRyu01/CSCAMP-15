@@ -6,16 +6,31 @@ import { motion, useAnimation, useInView } from "framer-motion";
 const containerVariants = {
   hidden: {
     opacity: 0,
-    y: 200,
+    y: 100,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 1,
-      type: "spring",
-      delay: 0.4,
+      type: "tween",
+      when: "beforeChildren",
+      staggerChildren: 0.3,
     },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.5
+    }
   },
 };
 
@@ -33,19 +48,18 @@ const bottleVaraiants = {
     scale: [1.7, 1.5, 1.7],
     transition: {
       repeat: Infinity,
-      duration: 0.8,
+      duration: 1.2,
       type: "tween",
     },
   },
 };
 
 function Schedule() {
-  const containerRef = useRef(null);
   const bottleRef = useRef(null);
 
   const [bottle, setbottle] = useState(0);
   const [currentBottle, setCurrentBottle] = useState(0);
-  const isInView = useInView(containerRef, { once: true });
+  const isInView = useInView(bottleRef, { once: true });
 
   const controlsContainer = useAnimation();
   const controls0 = useAnimation();
@@ -291,106 +305,98 @@ function Schedule() {
   }, [bottle]);
 
   return (
-    <motion.div
+    <div
       id="schedule"
-      className="h-[350px] md:h-[600px] lg:h-[800px] flex flex-col bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
-      ref={containerRef}
-      animate={{
-        transition: {
-          when: "beforeChildren",
-          staggerChildren: 1,
-        },
-      }}
+      className="h-[350px] md:h-[600px] lg:h-[800px]  bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
     >
-      <motion.h2
-        className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center"
-        initial={"hidden"}
-        animate={controlsContainer}
-        variants={containerVariants}
-      >
-        กำหนดการ
-      </motion.h2>
       <motion.div
-        className="flex justify-center shrink-0 mt-10"
-        initial={"hidden"}
-        animate={controlsContainer}
+        className="flex flex-col w-full h-full"
         variants={containerVariants}
+        animate={controlsContainer}
       >
+        <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
+          กำหนดการ
+        </h2>
         <motion.div
-          className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
-          variants={bottleVaraiants}
-          animate={controls0}
-          onClick={() => setbottle(0)}
-          ref={bottleRef}
-          transition={{
-            type: "tween",
-          }}
+          className="flex justify-center shrink-0 mt-10"
+          variants={childVariants}
         >
-          <Image
-            className="w-[80%] h-[80%]"
-            src={bottles[0].src}
-            alt={`bottles${bottles[0].index}`}
-            width="0"
-            height="0"
-            sizes="100vw"
-          />
-        </motion.div>
-        <motion.div
-          className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
-          variants={bottleVaraiants}
-          animate={controls1}
-          onClick={() => setbottle(1)}
-          transition={{
-            type: "tween",
-          }}
-        >
-          <Image
-            className="w-[80%] h-[80%]"
-            src={bottles[1].src}
-            alt={`bottles${bottles[1].index}`}
-            width="0"
-            height="0"
-            sizes="100vw"
-          />
-        </motion.div>
-        <motion.div
-          className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
-          variants={bottleVaraiants}
-          animate={controls2}
-          onClick={() => setbottle(2)}
-          transition={{
-            type: "tween",
-          }}
-        >
-          <Image
-            className="w-[80%] h-[80%]"
-            src={bottles[2].src}
-            alt={`bottles${bottles[2].index}`}
-            width="0"
-            height="0"
-            sizes="100vw"
-          />
-        </motion.div>
-        <motion.div
-          className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
-          variants={bottleVaraiants}
-          animate={controls3}
-          onClick={() => setbottle(3)}
-          transition={{
-            type: "tween",
-          }}
-        >
-          <Image
-            className="w-[80%] h-[80%]"
-            src={bottles[3].src}
-            alt={`bottles${bottles[3].index}`}
-            width="0"
-            height="0"
-            sizes="100vw"
-          />
+          <motion.div
+            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            variants={bottleVaraiants}
+            animate={controls0}
+            onClick={() => setbottle(0)}
+            ref={bottleRef}
+            transition={{
+              type: "tween",
+            }}
+          >
+            <Image
+              className="w-[80%] h-[80%]"
+              src={bottles[0].src}
+              alt={`bottles${bottles[0].index}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+            />
+          </motion.div>
+          <motion.div
+            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            variants={bottleVaraiants}
+            animate={controls1}
+            onClick={() => setbottle(1)}
+            transition={{
+              type: "tween",
+            }}
+          >
+            <Image
+              className="w-[80%] h-[80%]"
+              src={bottles[1].src}
+              alt={`bottles${bottles[1].index}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+            />
+          </motion.div>
+          <motion.div
+            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            variants={bottleVaraiants}
+            animate={controls2}
+            onClick={() => setbottle(2)}
+            transition={{
+              type: "tween",
+            }}
+          >
+            <Image
+              className="w-[80%] h-[80%]"
+              src={bottles[2].src}
+              alt={`bottles${bottles[2].index}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+            />
+          </motion.div>
+          <motion.div
+            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            variants={bottleVaraiants}
+            animate={controls3}
+            onClick={() => setbottle(3)}
+            transition={{
+              type: "tween",
+            }}
+          >
+            <Image
+              className="w-[80%] h-[80%]"
+              src={bottles[3].src}
+              alt={`bottles${bottles[3].index}`}
+              width="0"
+              height="0"
+              sizes="100vw"
+            />
+          </motion.div>
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
 

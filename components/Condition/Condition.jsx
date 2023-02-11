@@ -17,6 +17,7 @@ const containerVariants = {
       type: "tween",
       when: "beforeChildren",
       staggerChildren: 0.3,
+      delay: 0.4,
     },
   },
 };
