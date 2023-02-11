@@ -20,7 +20,7 @@ const islandDraft = [
 
 function Card({ data, selectedIsland }) {
   return (
-    <div className="relative h-fit md:h-[300px] 2xl:h-[360px] flex flex-col md:grid md:grid-cols-5 text-tundora-700 rounded-[20px]  ">
+    <div className="relative h-fit md:h-[300px] 2xl:h-[360px] flex flex-col md:grid md:grid-cols-5 text-[#74503c] rounded-[20px]  ">
       <div className="absolute w-full h-[520px] xs:h-[400px] md:h-[350px] 2xl:h-[400px] z-0">
         <Image
           src={paperWeb}
@@ -44,7 +44,7 @@ function Card({ data, selectedIsland }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="mt-12 md:mb-12 w-[70%] mx-auto z-10 flex flex-col justify-end items-center md:row-auto md:col-span-2 "
+        className="mt-12 md:mb-12 md:pt-4 w-[70%] mx-auto z-10 flex flex-col justify-start items-center md:row-auto md:col-span-2 "
       >
         <div className="relative w-[114px] md:w-[180px] 2xl:w-[270px] h-[86px] md:h-[135px] 2xl:h-[202px]">
           <Image
@@ -58,7 +58,6 @@ function Card({ data, selectedIsland }) {
         <p className="font-bold text-sm md:text-lg 2xl:text-2xl">
           {data[selectedIsland].title}
         </p>
-        {/* <hr className="md:hidden mt-2 w-full border-b-[4px]  border-black border-opacity-[29%] rounded" /> */}
       </motion.div>
       {/* line mobile*/}
       <div className="w-[100%] h-[16px] mx-auto relative md:hidden">
