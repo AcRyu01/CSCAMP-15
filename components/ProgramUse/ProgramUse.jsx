@@ -22,10 +22,10 @@ function ProgramUse() {
           <div>
             <Image
               src={paper}
-              className="m-auto absolute md:relative w-[293px] 2xl:w-[570px]"
+              className="m-auto absolute md:relative w-[293px] 2xl:w-[427px]"
               alt="paper"
             />
-            <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] 2xl:px-[56px] ">
+            <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-75px]   px-[30px] md:px-[7px] 2xl:px-[30px]">
               <Image
                 src={discord}
                 className="relative w-[75px] 2xl:w-[150px] m-auto dropShadow"
@@ -38,21 +38,21 @@ function ProgramUse() {
                 <div>
                   <Image
                     src={LineCard}
-                    className="md:w-[241px] 2xl:w-[471px]"
+                    className="md:w-[241px] 2xl:w-[360px] m-auto"
                     alt="LineCard"
                   />
                 </div>
-                <div className="md:w-[241.81px] 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal mt-[18px] mx-auto">
+                <div className=" md:text-[20px] 2xl:text-[24px] text-tundora-700 whitespace-normal mt-[18px] mx-auto">
                   <div>เราจะใช้ Discord </div>
                   <div>ในการสื่อสารกันเป็นหลัก</div>
                   <div>รวมไปถึงใช้ในการเรียนการสอนด้วย</div>
                 </div>
               </div>
-              <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[92px] md:mt-[10.5px] 2xl:mt-[185px]">
+              <div className="relative flex space-x-[32px]   justify-center mt-[92px] md:mt-[100px] 2xl:mt-[135px]">
                 <a href="https://discord.com" target="_blank" rel="noreferrer">
                   <Image
                     src={discord_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
+                    className="w-[101px]  2xl:w-[150px]  rounded-[10px] dropShadow"
                     alt="discord_link"
                   />
                 </a>
@@ -63,7 +63,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={download_link}
-                    className="w-[101px] 2xl:w-[197px] rounded-[10px] dropShadow"
+                    className="w-[101px] 2xl:w-[150px] rounded-[10px] dropShadow"
                     alt="download_link"
                   />
                 </a>
@@ -73,27 +73,27 @@ function ProgramUse() {
           <div className="mt-[97px] md:mt-0">
             <Image
               src={paper}
-              className="m-auto absolute md:relative w-[293px] 2xl:w-[570px] "
+              className="m-auto absolute md:relative w-[293px] 2xl:w-[427px] "
               alt="paper"
             />
-            <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] md:px-[20px] 2xl:px-[56px]">
+            <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-75px]   px-[30px] md:px-[19px] 2xl:px-[30px]">
               <Image
                 src={vscode}
                 className="relative w-[75px] 2xl:w-[150px] m-auto dropShadow"
                 alt="vscode"
               />
               <div>
-                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
+                <div className=" md:text-[32px] 2xl:text-[36px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
                   Visual Studio Code
                 </div>
                 <div>
                   <Image
                     src={LineCard}
-                    className="md:w-[241px] 2xl:w-[471px]"
+                    className="md:w-[241px] 2xl:w-[360px] m-auto"
                     alt="LineCard"
                   />
                 </div>
-                <div className="md:w-auto 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal mt-[18px]">
+                <div className="md:text-[20px] 2xl:text-[24px] text-tundora-700 whitespace-normal mt-[18px]">
                   <div>
                     ใช้ Visual Studio Code เป็น
                     <span className="hidden 2xl:inline"> editor</span>
@@ -107,7 +107,7 @@ function ProgramUse() {
                   ก็สามารถใช้ได้เช่นกัน
                 </div>
               </div>
-              <div className="absolute hidden 2xl:flex md:w-auto bottom-20 left-1/3">
+              <div className="absolute hidden 2xl:flex md:w-auto bottom-[64px] left-1/3">
                 <a
                   href="https://www.python.org/downloads/"
                   target="_blank"
@@ -115,12 +115,12 @@ function ProgramUse() {
                 >
                   <Image
                     src={python_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
+                    className="w-[101px]  2xl:w-[150px]  rounded-[10px] dropShadow"
                     alt="python_link"
                   />
                 </a>
               </div>
-              <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center mt-[65px] md:mt-[10.5px] 2xl:mt-[130px]">
+              <div className="relative flex space-x-[32px]  2xl:space-x-[64px] justify-center  mt-[65px] md:mt-[67px] 2xl:mt-[100px]">
                 <a
                   href="https://code.visualstudio.com/"
                   target="_blank"
@@ -128,7 +128,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={vscode_link}
-                    className="w-[101px]  2xl:w-[197px]  rounded-[10px] dropShadow"
+                    className="w-[101px]  2xl:w-[150px]  rounded-[10px] dropShadow"
                     alt="vscode_link"
                   />
                 </a>
@@ -139,7 +139,7 @@ function ProgramUse() {
                 >
                   <Image
                     src={download_link}
-                    className="w-[101px] 2xl:w-[197px] rounded-[10px] dropShadow"
+                    className="w-[101px] 2xl:w-[150px] rounded-[10px] dropShadow"
                     alt="download_link"
                   />
                 </a>
