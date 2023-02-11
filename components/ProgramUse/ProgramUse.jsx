@@ -5,20 +5,20 @@ import discord_link from "assets/images/discord_link.png";
 import download_link from "assets/images/download_link.png";
 import vscode_link from "assets/images/vscode_link.png";
 import python_link from "assets/images/python_link.png";
-
 import paper from "assets/images/paper.png";
+import LineCard from "assets/images/LineCard_h.png";
 
 function ProgramUse() {
   return (
     <>
       <div
         id="programUse"
-        className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center "
+        className="relative  xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center z-10"
       >
-        <div className="text-3xl md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold">
+        <div className="text-3xl md:text-4xl xl:text-[3vw] 2xl:text-[4.2vw] text-[#F2F2F2] font-bold">
           โปรแกรมที่ใช้ในกิจกรรม
         </div>
-        <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[60px] 2xl:mt-[188px] md:space-x-[64px] 2xl:space-x-[56px]">
+        <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[80px] 2xl:mt-[128px] md:space-x-[64px] 2xl:space-x-[56px]">
           <div>
             <Image
               src={paper}
@@ -28,15 +28,21 @@ function ProgramUse() {
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] 2xl:px-[56px] ">
               <Image
                 src={discord}
-                className="relative w-[100px] 2xl:w-[200px] m-auto dropShadow"
+                className="relative w-[75px] 2xl:w-[150px] m-auto dropShadow"
                 alt="discord"
               />
               <div>
-                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900  ">
+                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
                   Discord
                 </div>
-                <div className="border-[4px] border-black  opacity-50 rounded   mt-[22px] mb-[41px]"></div>
-                <div className="md:w-[241.81px] 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal">
+                <div>
+                  <Image
+                    src={LineCard}
+                    className="md:w-[241px] 2xl:w-[471px]"
+                    alt="LineCard"
+                  />
+                </div>
+                <div className="md:w-[241.81px] 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal mt-[18px] mx-auto">
                   <div>เราจะใช้ Discord </div>
                   <div>ในการสื่อสารกันเป็นหลัก</div>
                   <div>รวมไปถึงใช้ในการเรียนการสอนด้วย</div>
@@ -73,15 +79,21 @@ function ProgramUse() {
             <div className="relative md:absolute w-auto h-auto top-[-50px] 2xl:top-[-100px]  px-[30px] md:px-[20px] 2xl:px-[56px]">
               <Image
                 src={vscode}
-                className="relative w-[100px] 2xl:w-[200px] m-auto dropShadow"
+                className="relative w-[75px] 2xl:w-[150px] m-auto dropShadow"
                 alt="vscode"
               />
               <div>
-                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900  ">
+                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tiber-900 md:mt-[15px] mt-[20px]">
                   Visual Studio Code
                 </div>
-                <div className="border-[4px] border-black  opacity-50 rounded   mt-[22px] mb-[41px]"></div>
-                <div className="md:w-auto 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal">
+                <div>
+                  <Image
+                    src={LineCard}
+                    className="md:w-[241px] 2xl:w-[471px]"
+                    alt="LineCard"
+                  />
+                </div>
+                <div className="md:w-auto 2xl:w-[471px] md:text-[20px] 2xl:text-[32px] text-tundora-700 whitespace-normal mt-[18px]">
                   <div>
                     ใช้ Visual Studio Code เป็น
                     <span className="hidden 2xl:inline"> editor</span>
@@ -139,7 +151,5 @@ function ProgramUse() {
     </>
   );
 }
-{
-  /* */
-}
+
 export default ProgramUse;
