@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import island1 from "@/assets/images/island1.png";
@@ -67,6 +67,7 @@ function Island({ selectedIsland, setSelectedIsland, data }) {
                 alt="Island Ship"
                 fill
                 className="object-contain"
+                sizes="(min-width: 0) 100vw"
               />
             </div>
           </motion.div>

@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import localFont from "@next/font/local";
 import Layout from "@/components/Layout/Layout";
 import "@/styles/globals.css";
@@ -38,6 +39,7 @@ export default function App({ Component, pageProps }) {
       <main className={`${sukhumvitSet.variable} font-primary`}>
         <Layout>
           <Component {...pageProps} />
+          {/* <Analytics /> */}
         </Layout>
       </main>
       <style jsx global>
