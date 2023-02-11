@@ -15,7 +15,7 @@ function ProgramUse() {
         id="programUse"
         className=" xs:pt-[95px] md:pt-[97px] 2xl:pt-[204px] mb-64 md:mb-32 2xl:mb-56 text-white text-center "
       >
-        <div className="topic text-[#F2F2F2]">โปรแกรมที่ใช้ในกิจกรรม</div>
+        <div className="topic text-[#F2F2F2] mb-20">โปรแกรมที่ใช้ในกิจกรรม</div>
         <div className="relative w-[293px] md:w-auto m-auto md:flex  justify-center xs:mt-[75px] md:mt-[60px] 2xl:mt-[188px] md:space-x-[64px] 2xl:space-x-[56px]">
           <div>
             <Image
@@ -75,7 +75,7 @@ function ProgramUse() {
                 alt="vscode"
               />
               <div>
-                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tundora-700 ">
+                <div className=" md:text-[32px] 2xl:text-[48px] 2xl:leading-[76px] text-tundora-700  ">
                   Visual Studio Code
                 </div>
                 <div className="border-[4px] border-black  opacity-50 rounded   mt-[22px] mb-[41px]"></div>

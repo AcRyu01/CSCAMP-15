@@ -76,7 +76,7 @@ function Timetable() {
   return (
     <div
       id="timetable"
-      className="max-w-[1200px] pt-52 md:pt-36 2xl:pt-64 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
+      className="max-w-[1200px] pt-32 md:pt-36 2xl:pt-56 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
     >
       <h2 className="topic mb-7 md:mb-14 2xl:mb-20">ตารางเวลา</h2>
       <div className="max-w-[1200px] w-full">
