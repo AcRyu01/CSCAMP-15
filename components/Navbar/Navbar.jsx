@@ -14,7 +14,7 @@ function Navbar() {
     { name: "ช่องทางการติดต่อ", href: "#contact" },
   ];
   return (
-    <div className="hidden md:block border-b z-50 border-white w-full h-auto top-0 fixed">
+    <div className=" hidden md:block border-b fixed z-50 border-white w-full h-auto top-0 left-0 ">
       <div className="flex items-center justify-between bg-jungle-mist-300 py-[5px] px-[8px] md:py-[4px] md:px-[13px] 2xl:py-[10px] 2xl:px-[30px]">
         <div className="flex">
           <Image
