@@ -151,7 +151,5 @@ function ProgramUse() {
     </>
   );
 }
-{
-  /* */
-}
+
 export default ProgramUse;
