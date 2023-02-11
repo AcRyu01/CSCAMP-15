@@ -57,7 +57,7 @@ function Banner() {
   });
   return (
     <>
-      <div className="h-fit bg-banner flex flex-col items-center overflow-hidden">
+      <div className="h-fit bg-banner flex flex-col items-center overflow-hidden md:mt-8 lg:mt-9 2xl:mt-14">
         {/* logo */}
         <div className="relative w-full h-[211px] 2xl:h-[347px] mx-4 z-10">
           <Image
