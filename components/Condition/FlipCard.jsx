@@ -28,7 +28,7 @@ const FlipCard = ({ imgBack, imgFront, message = "", subMessage = [] }) => {
         transition={{ type: "spring" }}
       >
         <motion.div
-          className="flip-card w-full h-auto backface-visibility-hidden absolute dropShadow flex justify-center"
+          className="flip-card w-full h-auto backface-visibility-hidden absolute flex justify-center drop-shadow-lg"
           initial={{ rotateY: 180 }}
           animate={fControls}
           onClick={handleClick}
@@ -42,7 +42,7 @@ const FlipCard = ({ imgBack, imgFront, message = "", subMessage = [] }) => {
           </div>
         </motion.div>
         <motion.div
-          className="flip-card w-full h-auto backface-visibility-hidden absolute dropShadow"
+          className="flip-card w-full h-auto backface-visibility-hidden absolute drop-shadow-lg"
           animate={bControls}
           onClick={handleClick}
         >

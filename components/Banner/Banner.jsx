@@ -4,6 +4,50 @@ import logoCamp from "@/assets/images/LogoCamp.png";
 import Ship from "./Ship";
 import cloud1 from "@/assets/images/Cloud1.png";
 import cloud2 from "@/assets/images/Cloud2.png";
+import { motion } from "framer-motion";
+
+const cloud1Varaints = {
+  visible: {
+    x: ["0vw", "20vw", "0vw"],
+    transition: {
+      duration: 50,
+      repeat: Infinity,
+      type: "tween",
+    },
+  },
+};
+const cloud2Varaints = {
+  visible: {
+    x: ["0vw", "10vw", "0vw"],
+    transition: {
+      duration: 40,
+      repeat: Infinity,
+      type: "tween",
+    },
+  },
+};
+const cloud3Varaints = {
+  visible: {
+    x: ["0vw", "7vw", "0vw"],
+    scale: [1, 0.8, 1],
+    transition: {
+      duration: 50,
+      repeat: Infinity,
+      type: "tween",
+    },
+  },
+};
+const cloud4Varaints = {
+  visible: {
+    x: ["0vw", "5vw", "0vw"],
+    scale: [1, 0.7, 1],
+    transition: {
+      duration: 50,
+      repeat: Infinity,
+      type: "tween",
+    },
+  },
+};
 
 function Banner() {
   const countDownDate = "2023-02-13";
@@ -13,9 +57,9 @@ function Banner() {
   });
   return (
     <>
-      <div className="h-fit bg-banner flex flex-col items-center overflow-hidden">
+      <div className="h-fit bg-banner flex flex-col items-center overflow-hidden md:mt-8 lg:mt-9 2xl:mt-14">
         {/* logo */}
-        <div className="relative w-full h-[211px] 2xl:h-[347px] mx-4">
+        <div className="relative w-full h-[211px] 2xl:h-[347px] mx-4 z-10">
           <Image
             src={logoCamp}
             alt="logo Camp"
@@ -27,7 +71,11 @@ function Banner() {
         {/* timer */}
         <div className="relative -mt-4 md:-mt-10 2xl:-mt-20 flex flex-col gap-4 2xl:gap-6 w-[80%] max-w-[300px] 2xl:max-w-[500px] items-center">
           {/* cloud */}
-          <div className="banner-cloud w-[312px] 2xl:w-[581px] h-[163px] 2xl:h-[304px] opacity-50 -top-32 2xl:-top-64 -left-96 2xl:-left-[700px]">
+          <motion.div
+            className="banner-cloud w-[312px] 2xl:w-[581px] h-[163px] 2xl:h-[304px] opacity-50 -top-32 2xl:-top-64 -left-96 2xl:-left-[700px]"
+            variants={cloud1Varaints}
+            animate={"visible"}
+          >
             <Image
               src={cloud1}
               alt="cloud1"
@@ -35,8 +83,12 @@ function Banner() {
               className="object-contain"
               sizes="(min-width: 0) 100vw"
             />
-          </div>
-          <div className="banner-cloud w-[204px] 2xl:w-[380px] h-[107px] 2xl:h-[199px] opacity-60 -top-20 2xl:-top-60 -right-60 2xl:-right-[430px]">
+          </motion.div>
+          <motion.div
+            className="banner-cloud w-[204px] 2xl:w-[380px] h-[107px] 2xl:h-[199px] opacity-60 -top-20 2xl:-top-60 -right-60 2xl:-right-[430px]"
+            variants={cloud2Varaints}
+            animate={"visible"}
+          >
             <Image
               src={cloud1}
               alt="cloud1"
@@ -44,8 +96,12 @@ function Banner() {
               className="object-contain"
               sizes="(min-width: 0) 100vw"
             />
-          </div>
-          <div className="banner-cloud w-[226px] 2xl:w-[421px] h-[114px] 2xl:h-[213px] opacity-20 2xl:-top-16 -right-96 2xl:-right-[650px]">
+          </motion.div>
+          <motion.div
+            className="banner-cloud w-[226px] 2xl:w-[421px] h-[114px] 2xl:h-[213px] opacity-20 2xl:-top-16 -right-96 2xl:-right-[650px]"
+            variants={cloud3Varaints}
+            animate={"visible"}
+          >
             <Image
               src={cloud2}
               alt="cloud2"
@@ -53,8 +109,12 @@ function Banner() {
               className="object-contain"
               sizes="(min-width: 0) 100vw"
             />
-          </div>
-          <div className="banner-cloud w-[226px] 2xl:w-[421px] h-[113px] 2xl:h-[213px] opacity-50 top-16 2xl:top-20 -left-60 2xl:-left-[430px]">
+          </motion.div>
+          <motion.div
+            className="banner-cloud w-[226px] 2xl:w-[421px] h-[113px] 2xl:h-[213px] opacity-50 top-16 2xl:top-20 -left-60 2xl:-left-[430px]"
+            variants={cloud4Varaints}
+            animate={"visible"}
+          >
             <Image
               src={cloud2}
               alt="cloud2"
@@ -62,7 +122,7 @@ function Banner() {
               className="object-contain"
               sizes="(min-width: 0) 100vw"
             />
-          </div>
+          </motion.div>
           <p className="text-xl 2xl:text-3xl font-medium text-center">
             นับถอยหลังเปิดรับลูกเรือ
           </p>
