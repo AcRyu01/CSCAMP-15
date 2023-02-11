@@ -34,7 +34,7 @@ const FlipCard = ({ imgBack, imgFront, message = "", subMessage = [] }) => {
           onClick={handleClick}
         >
           <Image src={imgFront} alt="" width="0" height="0" sizes="100vw" />
-          <div className="absolute top-[60%] 2xl:top-[65%] w-[90%] text-[#F2F2F2] text-center">
+          <div className="absolute top-[60%] px-[15px] w-[90%] text-[#F2F2F2] text-center">
             <p className="text-xs font-thin md:text-sm md:font-normal 2xl:font-semibold 2xl:text-lg">{message} </p>
             {subMessage.map((text, i) => (
               <p key={i} className="text-[9px] font-[50] md:text-xs md:font-extralight 2xl:font-light 2xl:text-sm">{text}</p>

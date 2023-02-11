@@ -307,14 +307,14 @@ function Schedule() {
   return (
     <div
       id="schedule"
-      className="h-[350px] md:h-[600px] lg:h-[800px]  bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
+      className="h-[350px] md:h-[500px] lg:h-[600px]  bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000] my-[60px]"
     >
       <motion.div
         className="flex flex-col w-full h-full"
         variants={containerVariants}
         animate={controlsContainer}
       >
-        <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
+        <h2 className="text-3xl md:text-5xl 2xl:text-6xl text-[#F2F2F2] font-bold text-center">
           กำหนดการ
         </h2>
         <motion.div
@@ -322,7 +322,7 @@ function Schedule() {
           variants={childVariants}
         >
           <motion.div
-            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px] flex items-end justify-center shrink-0 cursor-pointer absolute"
             variants={bottleVaraiants}
             animate={controls0}
             onClick={() => setbottle(0)}
@@ -341,7 +341,7 @@ function Schedule() {
             />
           </motion.div>
           <motion.div
-            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px] flex items-end justify-center shrink-0 cursor-pointer absolute"
             variants={bottleVaraiants}
             animate={controls1}
             onClick={() => setbottle(1)}
@@ -359,7 +359,7 @@ function Schedule() {
             />
           </motion.div>
           <motion.div
-            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px] flex items-end justify-center shrink-0 cursor-pointer absolute"
             variants={bottleVaraiants}
             animate={controls2}
             onClick={() => setbottle(2)}
@@ -377,7 +377,7 @@ function Schedule() {
             />
           </motion.div>
           <motion.div
-            className="w-[120px] h-[180px] md:w-[250px] md:h-[375px] lg:w-[300px] lg:h-[450px] flex items-end justify-center shrink-0 cursor-pointer absolute"
+            className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px] flex items-end justify-center shrink-0 cursor-pointer absolute"
             variants={bottleVaraiants}
             animate={controls3}
             onClick={() => setbottle(3)}

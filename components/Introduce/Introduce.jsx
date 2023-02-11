@@ -49,7 +49,7 @@ function Introduce() {
       initial={"hidden"}
       animate={control}
     >
-      <h2 className="topic mb-2 md:mb-12 2xl:mb-10" ref={ref}>
+      <h2 className="topic text-3xl md:text-5xl 2xl:text-6xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold text-center" ref={ref}>
         CS CAMP 15
       </h2>
       <motion.p

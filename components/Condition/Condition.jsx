@@ -56,12 +56,12 @@ const Condition = () => {
       ref={ref}
     >
       <Container className="flex flex-col items-center mb-64 md:mb-32 2xl:mb-56">
-        <h2 className="text-3xl md:text-4xl xl:text-6xl 2xl:text-8xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold">
+        <h2 className="text-3xl md:text-5xl 2xl:text-6xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold">
           เงื่อนไขการสมัคร
         </h2>
         <Container className="flex justify-around flex-wrap-reverse mt-10">
           <motion.div
-            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]"
+            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px]"
             variants={cardVariants}
           >
             <FlipCard
@@ -71,7 +71,7 @@ const Condition = () => {
             />
           </motion.div>
           <motion.div
-            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]"
+            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px]"
             variants={cardVariants}
           >
             <FlipCard
@@ -83,7 +83,7 @@ const Condition = () => {
             />
           </motion.div>
           <motion.div
-            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] xl:w-[300px] xl:h-[450px]"
+            className="cursor-pointer w-[40vw] h-[65vw] md:w-[200px] md:h-[300px] lg:w-[250px] lg:h-[375px]"
             variants={cardVariants}
           >
             <FlipCard
