@@ -50,7 +50,7 @@ const cloud4Varaints = {
 };
 
 function Banner() {
-  const countDownDate = "2023-02-13";
+  const countDownDate = "2023/02/13 00:00:00 +0700";
   const currentDate = new Date().getDate();
   const currentMonth = new Date().getMonth() + 1;
   // For avoid React Hydration bug.
