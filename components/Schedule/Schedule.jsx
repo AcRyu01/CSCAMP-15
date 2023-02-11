@@ -94,9 +94,7 @@ function Schedule() {
       className="h-[70vh] md:h-[60vh] lg:h-[85vh] flex flex-col justify-evenly bg-gradient-to-t from-[#00000000] via-[#00000060] to-[#00000000]"
       ref={containerRef}
     >
-      <h2 className="text-3xl mb-0 md:text-4xl xl:text-6xl 2xl:text-8xl text-[#F2F2F2] font-bold text-center">
-        กำหนดการ
-      </h2>
+      <h2 className="mb-0 text-[#F2F2F2] topic text-center">กำหนดการ</h2>
       <motion.div
         className="flex flex-nowrap justify-center shrink-0 "
         animate={controlsContainer}

@@ -30,7 +30,7 @@ a {
     @apply absolute hidden md:block;
   }
   .topic {
-    @apply text-3xl md:text-4xl 2xl:text-8xl font-bold;
+    @apply text-3xl md:text-4xl xl:text-6xl 2xl:text-7xl font-bold;
   }
   .island {
     @apply relative w-[75px] md:w-[85px] 2xl:w-[150px] h-[75px] md:h-[85px] 2xl:h-[150px] cursor-pointer hover:scale-125;

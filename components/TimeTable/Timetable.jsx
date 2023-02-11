@@ -62,8 +62,8 @@ const data = [
       "09.15 - 09.40 สันทนาการ",
       "09.40 - 09.10 เบรกทานอาหารว่าง ",
       "09.50 - 12.00 กิจกรรมเชิงวิชาการ",
-      "12.00 - 13.20 เบรกกลางวัน + สัน",
-      "13.20 - 16.00 ทำโปรเจก+พรีเซ็นต์",
+      "12.00 - 13.20 เบรกกลางวัน + สันทนาการ",
+      "13.20 - 16.00 ทำโปรเจก + พรีเซ็นต์",
       "16.00 - 16.30 สันทนาการ",
       "16.30 - 17.00 ประกาศผล + ปิดงาน",
     ],
@@ -71,30 +71,14 @@ const data = [
 ];
 
 function Timetable() {
-  // const ref1 = useRef();
-  // const [x, setX] = useState();
-  // const getPosition = () => {
-  //   const x = ref1.current.offsetLeft;
-  //   setX(x);
-  // };
-  // useEffect(() => {
-  //   getPosition();
-  //   window.addEventListener("resize", getPosition);
-  //   console.log(x);
-  // }, []);
-
   const [selectedIsland, setSelectedIsland] = useState(0);
 
   return (
     <div
       id="timetable"
-      className="max-w-[1200px] pt-52 md:pt-36 2xl:pt-32 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
+      className="max-w-[1200px] pt-52 md:pt-36 2xl:pt-64 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
     >
-      {/* <div
-      id="timetable"
-      className="flex flex-col items-center justify-center max-w-[1200px] pt-52 md:pt-36 2xl:pt-32 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
-    > */}
-      <h2 className="topic mb-7 md:mb-14 2xl:mb-24">ตารางเวลา</h2>
+      <h2 className="topic mb-7 md:mb-14 2xl:mb-20">ตารางเวลา</h2>
       <div className="max-w-[1200px] w-full">
         <Island
           selectedIsland={selectedIsland}

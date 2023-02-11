@@ -7,6 +7,8 @@ import islandDraft4 from "@/assets/images/islandDraft4.png";
 import islandDraft5 from "@/assets/images/islandDraft5.png";
 import paperMobile from "@/assets/images/paper.png";
 import paperWeb from "@/assets/images/Paper2.png";
+import LineCard_h from "@/assets/images/LineCard_h.png";
+import LineCard_v from "@/assets/images/LineCard_v.png";
 
 const islandDraft = [
   islandDraft1,
@@ -18,7 +20,7 @@ const islandDraft = [
 
 function Card({ data, selectedIsland }) {
   return (
-    <div className="relative h-fit md:h-[300px] 2xl:h-[360px] flex flex-col md:grid md:grid-cols-5 text-[#313131] rounded-[20px]  ">
+    <div className="relative h-fit md:h-[300px] 2xl:h-[360px] flex flex-col md:grid md:grid-cols-5 text-tundora-700 rounded-[20px]  ">
       <div className="absolute w-full h-[520px] xs:h-[400px] md:h-[350px] 2xl:h-[400px] z-0">
         <Image
           src={paperWeb}
@@ -56,18 +58,40 @@ function Card({ data, selectedIsland }) {
         <p className="font-bold text-sm md:text-lg 2xl:text-2xl">
           {data[selectedIsland].title}
         </p>
-        <hr className="md:hidden mt-2 w-full border-b-[4px]  border-black border-opacity-[29%] rounded" />
+        {/* <hr className="md:hidden mt-2 w-full border-b-[4px]  border-black border-opacity-[29%] rounded" /> */}
       </motion.div>
+      {/* line mobile*/}
+      <div className="w-[100%] h-[16px] mx-auto relative md:hidden">
+        <Image
+          src={LineCard_h}
+          alt="LineCard_h"
+          fill
+          className="object-contain"
+          sizes="(min-width: 0) 100vw"
+        />
+      </div>
       <motion.div
         key={data[selectedIsland].title}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.6 }}
-        className="my-2 md:my-5 md:mt-12 2xl:mt-16 2xl:my-8 mx-auto md:mx-0 z-10 text-left font-normal text-sm md:text-lg 2xl:text-2xl px-4 md:row-auto md:col-span-3 md:border-l-[4px] rounded-sm border-black border-opacity-[29%]"
+        className="flex my-2 md:my-5 md:mt-12 2xl:mt-16 2xl:my-8 mx-auto md:mx-0 z-10 text-left font-normal text-sm md:text-lg 2xl:text-2xl md:row-auto md:col-span-3 rounded-sm"
       >
-        {data[selectedIsland].time.map((text, idx) => {
-          return <p key={idx}>{text}</p>;
-        })}
+        {/* line */}
+        <div className="w-[16px] h-[120%] -mt-6 -ml-4 mr-4 relative hidden md:block">
+          <Image
+            src={LineCard_v}
+            alt="LineCard_h"
+            fill
+            className="object-cover"
+            sizes="(min-width: 0) 100vw"
+          />
+        </div>
+        <div>
+          {data[selectedIsland].time.map((text, idx) => {
+            return <p key={idx}>{text}</p>;
+          })}
+        </div>
       </motion.div>
     </div>
   );
