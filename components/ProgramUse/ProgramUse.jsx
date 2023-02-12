@@ -1,12 +1,12 @@
 import Image from "next/image";
-import discord from "assets/images/discord_logo.png";
-import vscode from "assets/images/vscode_logo.png";
-import discord_link from "assets/images/discord_link.png";
-import download_link from "assets/images/download_link.png";
-import vscode_link from "assets/images/vscode_link.png";
-import python_link from "assets/images/python_link.png";
-import paper from "assets/images/paper.png";
-import LineCard from "assets/images/LineCard_h.png";
+import discord from "assets/images/discord_logo.webp";
+import vscode from "assets/images/vscode_logo.webp";
+import discord_link from "assets/images/discord_link.webp";
+import download_link from "assets/images/download_link.webp";
+import vscode_link from "assets/images/vscode_link.webp";
+import python_link from "assets/images/python_link.webp";
+import paper from "assets/images/paper.webp";
+import LineCard from "assets/images/LineCard_h.webp";
 
 function ProgramUse() {
   return (
