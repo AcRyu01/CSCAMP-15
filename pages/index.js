@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import Banner from "@/components/Banner/Banner";
 import Schedule from "@/components/Schedule/Schedule";
 import Introduce from "@/components/Introduce/Introduce";

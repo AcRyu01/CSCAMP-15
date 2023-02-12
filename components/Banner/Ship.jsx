@@ -1,11 +1,11 @@
 import Image from "next/image";
-import ship1 from "@/assets/images/Ship1.png";
-import ship2 from "@/assets/images/Ship2.png";
-import wave0 from "@/assets/images/wave0.png";
-import wave1 from "@/assets/images/wave1.png";
-import wave2 from "@/assets/images/wave2.png";
-import wave3 from "@/assets/images/wave3.png";
-import wave4 from "@/assets/images/wave4.png";
+import ship1 from "@/assets/images/Ship1.webp";
+import ship2 from "@/assets/images/Ship2.webp";
+import wave0 from "@/assets/images/wave0.webp";
+import wave1 from "@/assets/images/wave1.webp";
+import wave2 from "@/assets/images/wave2.webp";
+import wave3 from "@/assets/images/wave3.webp";
+import wave4 from "@/assets/images/wave4.webp";
 import { motion } from "framer-motion";
 
 const shipVaraiants1 = {

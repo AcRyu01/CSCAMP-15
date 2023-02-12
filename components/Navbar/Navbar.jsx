@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import kmitl_logo from "@/assets/images/kmitl_logo.jpg";
-import camp_logo from "@/assets/images/camp_logo.jpg";
+import kmitl_logo from "@/assets/images/kmitl_logo.webp";
+import camp_logo from "@/assets/images/camp_logo.webp";
 
 function Navbar() {
   let Links = [

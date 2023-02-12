@@ -1,9 +1,9 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import logoCamp from "@/assets/images/LogoCamp.png";
+import logoCamp from "@/assets/images/LogoCamp.webp";
 import Ship from "./Ship";
-import cloud1 from "@/assets/images/Cloud1.png";
-import cloud2 from "@/assets/images/Cloud2.png";
+import cloud1 from "@/assets/images/Cloud1.webp";
+import cloud2 from "@/assets/images/Cloud2.webp";
 import { motion } from "framer-motion";
 
 const cloud1Varaints = {
