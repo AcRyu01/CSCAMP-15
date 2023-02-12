@@ -1,14 +1,14 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
-import islandDraft1 from "@/assets/images/islandDraft1.png";
-import islandDraft2 from "@/assets/images/islandDraft2.png";
-import islandDraft3 from "@/assets/images/islandDraft3.png";
-import islandDraft4 from "@/assets/images/islandDraft4.png";
-import islandDraft5 from "@/assets/images/islandDraft5.png";
-import paperMobile from "@/assets/images/paper.png";
-import paperWeb from "@/assets/images/Paper2.png";
-import LineCard_h from "@/assets/images/LineCard_h.png";
-import LineCard_v from "@/assets/images/LineCard_v.png";
+import islandDraft1 from "@/assets/images/islandDraft1.webp";
+import islandDraft2 from "@/assets/images/islandDraft2.webp";
+import islandDraft3 from "@/assets/images/islandDraft3.webp";
+import islandDraft4 from "@/assets/images/islandDraft4.webp";
+import islandDraft5 from "@/assets/images/islandDraft5.webp";
+import paperMobile from "@/assets/images/paper.webp";
+import paperWeb from "@/assets/images/Paper2.webp";
+import LineCard_h from "@/assets/images/LineCard_h.webp";
+import LineCard_v from "@/assets/images/LineCard_v.webp";
 
 const islandDraft = [
   islandDraft1,

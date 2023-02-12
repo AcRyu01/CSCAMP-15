@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import WebFooter from "@/assets/images/WebFooter.png";
-import samsung from "@/assets/images/samsung.png";
-import borntoDev from "@/assets/images/borntoDev.png";
-import DPTF from "@/assets/images/DPTF.png";
-import FLG from "@/assets/images/FLG.png";
+import WebFooter from "@/assets/images/WebFooter.webp";
+import samsung from "@/assets/images/samsung.webp";
+import borntoDev from "@/assets/images/borntoDev.webp";
+import DPTF from "@/assets/images/DPTF.webp";
+import FLG from "@/assets/images/FLG.webp";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const containerVariants = {
@@ -84,9 +84,7 @@ function Sponsor() {
           animate={controlsContainer}
         >
           <div>สนับสนุนโดย</div>
-          <motion.ul
-            className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] "
-          >
+          <motion.ul className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] ">
             {sponsor.map((logo) => (
               <motion.li
                 key={logo.name}

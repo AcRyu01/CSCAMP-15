@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "./Button";
 import Image from "next/image";
-import kmitl_logo from "@/assets/images/kmitl_logo.jpg";
-import camp_logo from "@/assets/images/camp_logo.jpg";
+import kmitl_logo from "@/assets/images/kmitl_logo.webp";
+import camp_logo from "@/assets/images/camp_logo.webp";
 
 function Navbar() {
   let Links = [
@@ -28,9 +28,9 @@ function Navbar() {
             alt="camp_logo"
           />
         </div>
-        <ul className="flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
+        <ul className=" whitespace-nowrap flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
           {Links.map((link) => (
-            <li key={link.name} className="md:ml-7  md:z-auto z-[-1]">
+            <li key={link.name} className="md:ml-[1.5vw]  md:z-auto z-[-1]">
               <a
                 href={link.href}
                 className="text-white hover:text-jungle-mist-600 hover:border-b-2 hover:border-jungle-mist-600 duration-200"
