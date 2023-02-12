@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Card from "./Card";
 import Island from "./Island";
+import { motion, useInView, useAnimationControls } from "framer-motion";
 
 const data = [
   {
@@ -70,25 +71,77 @@ const data = [
   },
 ];
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      type: "tween",
+      when: "beforeChildren",
+      staggerChildren: 0.4,
+      delay: 0.4,
+    },
+  },
+};
+
+const childVariants = {
+  hidden: {
+    opacity: 0,
+    // x: "-30vw",
+  },
+  visible: {
+    opacity: 1,
+    // x: 0,
+    transition: {
+      type: "tween",
+    },
+  },
+};
+
 function Timetable() {
   const [selectedIsland, setSelectedIsland] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const control = useAnimationControls();
+
+  useEffect(() => {
+    if (isInView) {
+      control.start("visible");
+    } else {
+      control.set("hidden");
+    }
+  }, [isInView]);
 
   return (
-    <div
+    <motion.div
       id="timetable"
-      className="max-w-[1200px] pt-32 md:pt-36 2xl:pt-56 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2] "
+      className="max-w-[1200px] pt-32 md:pt-36 2xl:pt-56 mx-8 md:mx-20 2xl:mx-auto pb-64 md:pb-32 2xl:pb-56 text-center text-[#F2F2F2]"
+      variants={containerVariants}
+      animate={control}
+      initial={"hidden"}
     >
       <h2 className="topic mb-7 md:mb-14 2xl:mb-20">ตารางเวลา</h2>
-      <div className="max-w-[1200px] w-full">
+      <motion.div
+        className="max-w-[1200px] w-full"
+        variants={childVariants}
+        ref={ref}
+      >
         <Island
           selectedIsland={selectedIsland}
           setSelectedIsland={setSelectedIsland}
           data={data}
         />
-      </div>
+      </motion.div>
       {/* card */}
-      <Card data={data} selectedIsland={selectedIsland} />
-    </div>
+      <motion.div variants={childVariants}>
+        <Card data={data} selectedIsland={selectedIsland} />
+      </motion.div>
+    </motion.div>
   );
 }
 export default Timetable;

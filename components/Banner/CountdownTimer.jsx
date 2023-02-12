@@ -3,9 +3,9 @@ import { useCountdown } from "@/hooks/useCountdown";
 
 const ExpiredNotice = () => {
   return (
-    <div className="text-center">
-      <span>Expired!!!</span>
-      <p>หมดเวลาแล้ว ช้าไปไอน้อง</p>
+    <div className="text-center text-xl 2xl:text-3xl font-normal text-white 2xl:mt-2">
+      <span>หมดเวลาของการผจญภัย</span>
+      <p>เจอกันใหม่ในปีหน้า</p>
     </div>
   );
 };

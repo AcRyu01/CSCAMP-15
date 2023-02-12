@@ -313,6 +313,7 @@ function Schedule() {
         className="flex flex-col w-full h-full"
         variants={containerVariants}
         animate={controlsContainer}
+        initial={"hidden"}
       >
         <h2 className="text-3xl md:text-5xl 2xl:text-6xl text-[#F2F2F2] font-bold text-center">
           กำหนดการ

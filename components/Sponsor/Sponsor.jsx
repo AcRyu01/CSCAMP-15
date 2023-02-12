@@ -82,6 +82,7 @@ function Sponsor() {
           ref={ref}
           variants={containerVariants}
           animate={controlsContainer}
+          initial={"hidden"}
         >
           <div>สนับสนุนโดย</div>
           <motion.ul
