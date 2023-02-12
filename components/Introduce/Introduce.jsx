@@ -49,12 +49,13 @@ function Introduce() {
       initial={"hidden"}
       animate={control}
     >
-      <h2 className="topic text-3xl md:text-5xl 2xl:text-6xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold text-center" ref={ref}>
+      <h2 className="topic text-3xl md:text-5xl 2xl:text-6xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold text-center">
         CS CAMP 15
       </h2>
       <motion.p
         className="text-base tracking-wide leading-7 md:leading-9 2xl:leading-[50px] md:text-xl 2xl:text-4xl font-extralight md:max-w-[700px] 2xl:max-w-[1000px]"
         variants={childVariants}
+        ref={ref}
       >
         ค่ายที่เปิดโอกาสให้โจรสลัดผู้กล้าทั้งหลายที่สนใจในด้านวิทยาการคอมพิวเตอร์
         ที่พร้อมจะออกไปตามล่าหาขุมทรัพย์ที่ซ่อนอยู่ตามเกาะต่าง ๆ
