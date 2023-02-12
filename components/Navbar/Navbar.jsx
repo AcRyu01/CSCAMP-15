@@ -28,7 +28,7 @@ function Navbar() {
             alt="camp_logo"
           />
         </div>
-        <ul className="flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
+        <ul className=" whitespace-nowrap flex items-center text-[14px] 2xl:text-[24px] 2xl:leading-[27px]   left-0 md:w-auto md:pl-0 transition-all duration-500 ease-in">
           {Links.map((link) => (
             <li key={link.name} className="md:ml-7  md:z-auto z-[-1]">
               <a
