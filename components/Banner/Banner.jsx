@@ -228,7 +228,7 @@ function Banner() {
                     duration: 0.35,
                   }}
                 >
-                  <a href={links[bottles.indexOf(text)]} target="_blank">
+                  <a href={links[bottles.indexOf(text)]} target="_blank" rel="noreferrer">
                     {text}
                   </a>
                 </motion.button>
