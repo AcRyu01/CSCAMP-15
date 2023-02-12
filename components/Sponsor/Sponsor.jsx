@@ -82,6 +82,7 @@ function Sponsor() {
           ref={ref}
           variants={containerVariants}
           animate={controlsContainer}
+          initial={"hidden"}
         >
           <div>สนับสนุนโดย</div>
           <motion.ul className="flex flex-wrap   md:text-[20px] 2xl:text-[36px] justify-center  items-center pt-[24px] ">

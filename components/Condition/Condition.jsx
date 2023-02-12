@@ -21,6 +21,7 @@ const containerVariants = {
     },
   },
 };
+
 const cardVariants = {
   hidden: {
     opacity: 0,
@@ -54,6 +55,7 @@ const Condition = () => {
       variants={containerVariants}
       animate={headControl}
       ref={ref}
+      initial={"hidden"}
     >
       <Container className="flex flex-col items-center mb-64 md:mb-32 2xl:mb-56">
         <h2 className="text-3xl md:text-5xl 2xl:text-6xl md:mb-12 2xl:mb-10 text-[#F2F2F2] font-bold">
