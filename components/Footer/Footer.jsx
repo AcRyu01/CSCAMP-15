@@ -1,12 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import Image from "next/image";
-import kmitl_logo from "@/assets/images/kmitl_logo.jpg";
-import camp_logo from "@/assets/images/camp_logo.jpg";
-import facebook from "@/assets/images/facebook.png";
-import instagram from "@/assets/images/instagram.png";
-import twitter from "@/assets/images/twitter.png";
-import mail from "@/assets/images/email.png";
-import telephone from "@/assets/images/phone-call.png";
+import kmitl_logo from "@/assets/images/kmitl_logo.webp";
+import camp_logo from "@/assets/images/camp_logo.webp";
+import facebook from "@/assets/images/facebook.webp";
+import instagram from "@/assets/images/instagram.webp";
+import twitter from "@/assets/images/twitter.webp";
+import mail from "@/assets/images/email.webp";
+import telephone from "@/assets/images/phone-call.webp";
 
 function Footer() {
   let contact = [

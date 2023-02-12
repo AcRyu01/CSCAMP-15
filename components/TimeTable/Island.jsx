@@ -2,12 +2,12 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-import island1 from "@/assets/images/island1.png";
-import island2 from "@/assets/images/island2.png";
-import island3 from "@/assets/images/island3.png";
-import island4 from "@/assets/images/island4.png";
-import island5 from "@/assets/images/island5.png";
-import islandShip from "@/assets/images/islandShip.png";
+import island1 from "@/assets/images/island1.webp";
+import island2 from "@/assets/images/island2.webp";
+import island3 from "@/assets/images/island3.webp";
+import island4 from "@/assets/images/island4.webp";
+import island5 from "@/assets/images/island5.webp";
+import islandShip from "@/assets/images/islandShip.webp";
 
 function Island({ selectedIsland, setSelectedIsland, data }) {
   const ref = useRef(null);
