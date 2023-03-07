@@ -76,6 +76,7 @@ const date = {
     month: 4,
   },
 };
+
 function Banner() {
   const thisDay = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Bangkok",
@@ -240,6 +241,8 @@ function Banner() {
                     target="_blank"
                     rel="noreferrer"
                   >
+                >
+                  <a href={links[bottles.indexOf(text)]} target="_blank" rel="noreferrer">
                     {text}
                   </a>
                 </motion.button>
