@@ -59,8 +59,9 @@ const date = {
     month: 2,
   },
   announcement: {
-    day: 8,
+    day: 9,
     month: 3,
+    hour: 8,
   },
   confirmation: {
     day: 12,
@@ -82,6 +83,7 @@ function Banner() {
   });
   const currentDate = new Date(thisDay).getDate();
   const currentMonth = new Date(thisDay).getMonth() + 1;
+  const currentHour = new Date(thisDay).getHours();
   // For avoid React Hydration bug.
 
   let countDownDate;
@@ -111,7 +113,14 @@ function Banner() {
     currentDate <= date.announcement.day - 1 &&
     currentMonth <= date.announcement.month
   ) {
-    countDownDate = `2023/${date.announcement.month}/${date.announcement.day} 00:00:00 +0700`;
+    countDownDate = `2023/${date.announcement.month}/${date.announcement.day} ${date.announcement.hour}:00:00 +0700`;
+    word = "ประกาศผลผู้ถูกเลือกภายใน";
+  } else if (
+    currentDate == date.announcement.day &&
+    currentMonth == date.announcement.month &&
+    currentHour < date.announcement.hour
+  ) {
+    countDownDate = `2023/${date.announcement.month}/${date.announcement.day} ${date.announcement.hour}:00:00 +0700`;
     word = "ประกาศผลผู้ถูกเลือกภายใน";
   } else if (
     currentDate <= date.confirmation.day &&
@@ -122,8 +131,6 @@ function Banner() {
     } 00:00:00 +0700`;
     word = "นับถอยหลังปิดการยืนยันสิทธิ์";
     bottles.push(["รายชื่อผู้ถูกเลือก"]);
-    links.push([""]);
-    bottles.push(["ยืนยันสิทธิ์"]);
     links.push([""]);
   } else if (
     currentDate <= date.startCamp.day - 1 &&
@@ -217,7 +224,7 @@ function Banner() {
           <p className="text-xl 2xl:text-3xl font-medium text-center">{word}</p>
           <CountdownTimer targetDate={countDownDate} />
 
-          {bottles.map((text) => {
+          {bottles.map((text, index) => {
             return (
               <>
                 <motion.button
@@ -227,6 +234,13 @@ function Banner() {
                   transition={{
                     duration: 0.35,
                   }}
+                  key={index}
+                >
+                  <a
+                    href={links[bottles.indexOf(text)]}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                 >
                   <a href={links[bottles.indexOf(text)]} target="_blank" rel="noreferrer">
                     {text}
