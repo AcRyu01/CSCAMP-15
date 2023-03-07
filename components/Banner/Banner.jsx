@@ -236,12 +236,6 @@ function Banner() {
                   }}
                   key={index}
                 >
-                  <a
-                    href={links[bottles.indexOf(text)]}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                >
                   <a href={links[bottles.indexOf(text)]} target="_blank" rel="noreferrer">
                     {text}
                   </a>
