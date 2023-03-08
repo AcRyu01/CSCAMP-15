@@ -66,6 +66,7 @@ const date = {
   confirmation: {
     day: 12,
     month: 3,
+    hour: 12,
   },
   startCamp: {
     day: 25,
@@ -78,6 +79,7 @@ const date = {
 };
 
 function Banner() {
+  const pdfUrl = "/pdf/lists.pdf";
   const thisDay = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Bangkok",
   });
@@ -88,7 +90,7 @@ function Banner() {
 
   let countDownDate;
   let word;
-  let bottles = [];
+  let botton = [];
   let links = [];
 
   if (
@@ -105,7 +107,7 @@ function Banner() {
       date.closeReg.day + 1
     } 00:00:00 +0700`;
     word = "นับถอยหลังปิดรับสมัครลูกเรือ";
-    bottles.push(["เข้าร่วม"]);
+    botton.push(["เข้าร่วม"]);
     links.push([
       "https://docs.google.com/forms/d/e/1FAIpQLScckDyHPRt7XWqhssEaoJa5OWNVxNI-lM2KLRlB-ZYPqci6dA/viewform",
     ]);
@@ -123,15 +125,20 @@ function Banner() {
     countDownDate = `2023/${date.announcement.month}/${date.announcement.day} ${date.announcement.hour}:00:00 +0700`;
     word = "ประกาศผลผู้ถูกเลือกภายใน";
   } else if (
-    currentDate <= date.confirmation.day &&
+    currentDate <= date.confirmation.day - 1 &&
     currentMonth <= date.confirmation.month
   ) {
-    countDownDate = `2023/${date.confirmation.month}/${
-      date.confirmation.day + 1
-    } 00:00:00 +0700`;
+    countDownDate = `2023/${date.confirmation.month}/${date.confirmation.day} ${date.confirmation.hour}:00:00 +0700`;
     word = "นับถอยหลังปิดการยืนยันสิทธิ์";
-    bottles.push(["รายชื่อผู้ถูกเลือก"]);
-    links.push([""]);
+    botton.push(["รายชื่อผู้ถูกเลือก"]);
+  } else if (
+    currentDate == date.confirmation.day &&
+    currentMonth <= date.confirmation.month &&
+    currentHour < date.confirmation.hour
+  ) {
+    countDownDate = `2023/${date.confirmation.month}/${date.confirmation.day} ${date.confirmation.hour}:00:00 +0700`;
+    word = "นับถอยหลังปิดการยืนยันสิทธิ์";
+    botton.push(["รายชื่อผู้ถูกเลือก"]);
   } else if (
     currentDate <= date.startCamp.day - 1 &&
     currentMonth <= date.startCamp.month
@@ -224,23 +231,20 @@ function Banner() {
           <p className="text-xl 2xl:text-3xl font-medium text-center">{word}</p>
           <CountdownTimer targetDate={countDownDate} />
 
-          {bottles.map((text, index) => {
+          {botton.map((text, index) => {
             return (
-              <>
-                <motion.button
-                  className="z-50 text-2xl 2xl:text-4xl font-normal text-white border-white border-[5px] md:border-[3px] 2xl:border-[5px] cursor-pointer hover:border-transparent hover:bg-white hover:text-jungle-green-500 rounded-[10px]  py-2 px-4 w-fit"
-                  whileHover={{ scale: 1.2 }}
-                  whileTap={{ scale: 0.8 }}
-                  transition={{
-                    duration: 0.35,
-                  }}
-                  key={index}
-                >
-                  <a href={links[bottles.indexOf(text)]} target="_blank" rel="noreferrer">
-                     {text}
-                  </a>
-                </motion.button>
-              </>
+              <motion.button
+                key={index}
+                className="z-50 text-2xl 2xl:text-4xl font-normal text-white border-white border-[5px] md:border-[3px] 2xl:border-[5px] cursor-pointer hover:border-transparent hover:bg-white hover:text-jungle-green-500 rounded-[10px]  py-2 px-4 w-fit"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.8 }}
+                transition={{
+                  duration: 0.35,
+                }}
+                onClick={() => window.open(`${pdfUrl}`, `_blank`)}
+              >
+                {text}
+              </motion.button>
             );
           })}
         </div>
