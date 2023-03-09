@@ -79,7 +79,7 @@ const date = {
 };
 
 function Banner() {
-  const pdfUrl = "/pdf/lists.pdf";
+  const pdfUrl = "/pdf/prakadpol.pdf";
   const thisDay = new Date().toLocaleString("en-US", {
     timeZone: "Asia/Bangkok",
   });
