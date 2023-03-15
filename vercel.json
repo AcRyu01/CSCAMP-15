@@ -9,6 +9,10 @@
         }
       ],
       "destination": "https://discord.gg/TbjaDVQWgz"
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/TbjaDVQWgz"
     }
   ]
 }
