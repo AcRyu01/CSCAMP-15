@@ -1,0 +1,18 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "discord.cscamp.net"
+        }
+      ],
+      "destination": "https://discord.gg/TbjaDVQWgz"
+    },
+    {
+      "source": "/discord",
+      "destination": "https://discord.gg/TbjaDVQWgz"
+    }
+  ]
+}
