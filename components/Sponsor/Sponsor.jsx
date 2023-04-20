@@ -5,6 +5,7 @@ import samsung from "@/assets/images/samsung.webp";
 import borntoDev from "@/assets/images/borntoDev.webp";
 import DPTF from "@/assets/images/DPTF.webp";
 import FLG from "@/assets/images/FLG.webp";
+import lactasoy from "@/assets/images/lactasoy.webp";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const containerVariants = {
@@ -54,6 +55,10 @@ const sponsor = [
   {
     img: DPTF,
     name: "DPTF",
+  },
+  {
+    img: lactasoy,
+    name: "lactasoy",
   },
 ];
 
