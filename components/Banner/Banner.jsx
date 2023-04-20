@@ -73,7 +73,7 @@ const date = {
     month: 4,
   },
   endCamp: {
-    day: 29,
+    day: 30,
     month: 4,
   },
 };
