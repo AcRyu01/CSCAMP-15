@@ -7,6 +7,7 @@ import DPTF from "@/assets/images/DPTF.webp";
 import FLG from "@/assets/images/FLG.webp";
 import lactasoy from "@/assets/images/lactasoy.webp";
 import webmaster from "@/assets/images/webmaster.webp";
+
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const containerVariants = {
