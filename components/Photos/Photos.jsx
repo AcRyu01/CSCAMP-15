@@ -62,27 +62,43 @@ const responsive = {
 const pictureSet = [
   {
     id: 0,
-    fileName: "t1.jpeg",
+    fileName: "11.png",
   },
   {
     id: 1,
-    fileName: "t2.jpeg",
+    fileName: "12.png",
   },
   {
     id: 2,
-    fileName: "t3.jpeg",
+    fileName: "13.png",
   },
   {
     id: 3,
-    fileName: "t4.jpeg",
+    fileName: "14.png",
   },
   {
     id: 4,
-    fileName: "t5.jpeg",
+    fileName: "15.png",
   },
   {
     id: 5,
-    fileName: "t6.jpeg",
+    fileName: "16.png",
+  },
+  {
+    id: 6,
+    fileName: "16.png",
+  },
+  {
+    id: 7,
+    fileName: "17.png",
+  },
+  {
+    id: 8,
+    fileName: "18.png",
+  },
+  {
+    id: 9,
+    fileName: "19.png",
   },
 ];
 
@@ -155,7 +171,10 @@ function Photos() {
           showDots
         >
           {pictureSet.map((pic) => (
-            <Img key={pic.id} imgSrc={pic.fileName} />
+            <Img
+              key={pic.id}
+              imgSrc={pic.fileName}
+            />
           ))}
         </Carousel>
       </div>
