@@ -1,4 +1,5 @@
 import localFont from "@next/font/local";
+// const localFont = require("@next/font/local");
 import Layout from "@/components/Layout/Layout";
 import "@/styles/globals.css";
 
